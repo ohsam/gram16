@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi" />
+	<meta name="keywords" content="LG Gram 16" />
+	<title>LG Gram 16 Proposal</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/examples.css" type="text/css">
+	<link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="../assets/js/lib/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/highlight.pack.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/modernizr.custom.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+  	<script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+</head>
+<body>
+	<div id="content-wrapper">
+		<div id="example-wrapper">
+			<div class="scrollContent">
+				<section id="titlechart">
+					<div id="description">
+						<h1>LG Gram16</h1>
+						<h2>2021년 LG 그램 16  제품 콘텐츠(USP) 개선 제안</h2>
+						<ol>
+							<li>When no duration is defined for the scene, the tween will simply start playing when the scroll reaches the trigger position.</li>
+							<li>If the scene has a duration the progress of the tween will directly correspond to the scroll position.</li>
+						</ol>
+					</div>
+					<script>
+						// init controller
+						var controller = new ScrollMagic.Controller();
+					</script>
+                </section>
+                
+                <section class="motionContent demo">
+                    <div id="trigger1" class="spacer s0"></div>
+                    <div class="spacer s2"></div>
+                    <div id="animate1" class="box2 skin">
+						<p>첫 박스</p>
+						<a href="#" class="viewsource">view source</a>
+                    </div>
+					<script>
+							// build scene
+							var scene = new ScrollMagic.Scene({
+                                                triggerElement: "#trigger1",
+                                                // duration: 300,
+                                                triggerHook: 0.6, // show, when scrolled 10% into view
+                                                reverse: true
+											})
+											.setTween("#animate1", 0.4, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+											.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+											.addTo(controller);
+					</script>
+				</section>
+				<section class="motionContent demo">
+                    <!-- <style type="text/css">
+                        #animate2 {
+                            position:absolute;
+                            top: 60%;
+                            opacity: 0;
+                            transform: scale(0.9);
+                        }
+                    </style> -->
+                    <div id="trigger2" class="spacer s1"></div>
+					<div id="animate2" class="box1 black">
+						<p>두번째 박스 내의 텍스트</p>
+						<a href="#" class="viewsource">view source</a>
+					</div>
+					<div class="spacer s2"></div>
+					<script>
+                        // set start offset
+                        TweenMax.set("#animate2", {opacity:0, top: "100"});
+
+                        // set tween
+                        var tween = new TimelineMax()
+                            .to("#animate2", 4, {top: 0, opacity: 1})
+                            .to("#animate2", 4, {opacity: 0, top:-100, delay: 2})
+                            //.to("#animate2", 1, {top: "-=200", opacity: 1})
+
+						// build scene
+						var scene = new ScrollMagic.Scene({
+                                            triggerElement: "#trigger2",
+                                            //duration: 700,
+                                            triggerHook: 0.7, // show, when scrolled 10% into view
+									        duration: "90%", // hide 10% before exiting view (80% + 10% from bottom)
+                                            reverse: true
+                                        })
+										// animate color and top border in relation to scroll position
+                                        .setTween(tween)
+										.addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+										.addTo(controller);
+					</script>
+				</section>
+				<div class="spacer s_viewport"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
