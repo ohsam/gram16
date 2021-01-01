@@ -10,7 +10,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="../assets/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
-    <link rel="stylesheet" href="../assets/css/examples.css" type="text/css">
+    <!-- <link rel="stylesheet" href="../assets/css/examples.css" type="text/css"> -->
 	<link rel="stylesheet" href="../assets/css/main.css" type="text/css">
 	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
 
@@ -42,10 +42,10 @@
 					</script>
                 </section>
                 
-                <section class="motionContent demo">
+                <section class="motionContent">
                     <div id="trigger1" class="spacer s0"></div>
                     <div class="spacer s2"></div>
-                    <div id="animate1" class="box2 skin">
+                    <div id="animate1" class="">
 						<p>첫 박스</p>
 						<a href="#" class="viewsource">view source</a>
                     </div>
@@ -62,7 +62,7 @@
 											.addTo(controller);
 					</script>
 				</section>
-				<section class="motionContent demo">
+				<section id="scene2" class="motionContent">
                     <!-- <style type="text/css">
                         #animate2 {
                             position:absolute;
@@ -71,36 +71,60 @@
                             transform: scale(0.9);
                         }
                     </style> -->
-                    <div id="trigger2" class="spacer s1"></div>
-					<div id="animate2" class="box1 black">
-						<p>두번째 박스 내의 텍스트</p>
-						<a href="#" class="viewsource">view source</a>
+					<div id="trigger2" class="spacer s0"></div>
+					<div id="animate2">
+						<div id="animate2_1" class="title">
+							<p>11% 더 커진<br/>16 대화면</p>
+						</div>
+						<div id="animate2_2">
+							<img id="animate2_2_info" src="../assets/img/scene_1_01_monitor_info.png" alt=""/>
+							<img src="../assets/img/scene_1_01_monitor.png" alt=""/>
+						</div>
 					</div>
 					<div class="spacer s2"></div>
 					<script>
-                        // set start offset
-                        TweenMax.set("#animate2", {opacity:0, top: "100"});
-
-                        // set tween
-                        var tween = new TimelineMax()
-                            .to("#animate2", 4, {top: 0, opacity: 1})
-                            .to("#animate2", 4, {opacity: 0, top:-100, delay: 2})
-                            //.to("#animate2", 1, {top: "-=200", opacity: 1})
-
+						// tween_title
+						TweenMax.set("#animate2_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate2_1", 3, {top: 0, opacity: 1, delay: 2})
+							.to("#animate2_1", 2, {opacity: 0, top:-100, delay: 3})
+							
+						// // tween_image
+						// TweenMax.set("#animate2_2", {scale: "1"});
+						// var tween_image1 = new TimelineMax()
+                        //     .to("#animate2_2", 4, {scale: 0.25})
+						
+						// TweenMax.set("#animate2_2_info", {opacity:0});
+						// var tween_image2 = new TimelineMax()
+						// 	.to("#animate2_2_info", 10, {opacity: 1, delay: 10})
+						
 						// build scene
-						var scene = new ScrollMagic.Scene({
-                                            triggerElement: "#trigger2",
-                                            //duration: 700,
-                                            triggerHook: 0.7, // show, when scrolled 10% into view
-									        duration: "90%", // hide 10% before exiting view (80% + 10% from bottom)
-                                            reverse: true
-                                        })
-										// animate color and top border in relation to scroll position
-                                        .setTween(tween)
-										.addIndicators({name: "2 (duration: 300)"}) // add indicators (requires plugin)
+						var sceneOption = {
+							triggerElement: "#trigger2",
+							triggerHook: 0.0,
+							duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setPin("#animate2")
+										.addIndicators({name: "2 (duration: 300)"})
 										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						// new ScrollMagic.Scene(sceneOption)
+						// 				.setTween(tween_image1)
+						// 				.addTo(controller);
+						// new ScrollMagic.Scene(sceneOption)
+						// 				.setTween(tween_image2)
+						// 				.addTo(controller);
 					</script>
 				</section>
+
+				<section id="animate3" class="motionContent">
+					빈영역
+				</section>
+
 				<div class="spacer s_viewport"></div>
 			</div>
 		</div>

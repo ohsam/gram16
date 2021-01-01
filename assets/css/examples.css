@@ -59,12 +59,11 @@ section#titlechart {
 	height: 100%;
 }
 section#titlechart #description {
-	top: 50%;
-	left: 50%;
+	top: 20%;
 	position: absolute;
-	width: 600px;
-	height: 300px;
-	margin: -150px auto auto -300px;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
 }
 section#titlechart.home #description {
 	padding-top: 0;
