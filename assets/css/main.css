@@ -15,10 +15,12 @@
     font-weight: 700;
 }
 
-#animate2 {height:800px;overflow:hidden;background:Red;}
-#animate2_1 {position:absolute;}
-#animate2_2 {position:absolute;}
+#animate2 {height:640px;overflow:hidden;background:#fff;}
+#animate2_1 {position:absolute;left:25px;}
+#animate2_2 {position:absolute;left:50%;/*top:-45px;*/}
+#animate2_2 > img {position:absolute;left:-700px;top:0;}
 #animate2_2_info {position:absolute;}
+#animate2_3 {position:absolute;left:25px;/*top:590px;*/}
 
 #animate3 {
     height: 800px;

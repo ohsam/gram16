@@ -80,29 +80,39 @@
 							<img id="animate2_2_info" src="../assets/img/scene_1_01_monitor_info.png" alt=""/>
 							<img src="../assets/img/scene_1_01_monitor.png" alt=""/>
 						</div>
+						<div id="animate2_3" class="desc">
+							<p>*16형 그램 16 기준: 40.6cm</p>
+							<p>*15형 울트라 PC(15U50N 기준): 39.6cm</p>
+						</div>
 					</div>
-					<div class="spacer s2"></div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate2_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate2_1", {opacity:0, top: "160"});
                         var tween_title = new TimelineMax()
-                            .to("#animate2_1", 3, {top: 0, opacity: 1, delay: 2})
-							.to("#animate2_1", 2, {opacity: 0, top:-100, delay: 3})
+                            .to("#animate2_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut, delay: 2})
+							.to("#animate2_1", 2, {opacity: 0.6, top:-10, delay: 3})
 							
-						// // tween_image
-						// TweenMax.set("#animate2_2", {scale: "1"});
-						// var tween_image1 = new TimelineMax()
-                        //     .to("#animate2_2", 4, {scale: 0.25})
+						// tween_image
+						TweenMax.set("#animate2_2", {scale: "1", top: "-45px"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate2_2", 5, {scale: 0.25, top:300, ease: Cubic.easeInOut})
+							.to("#animate2_2", 2, {top: 260, opacity: 0.6, delay: 3, ease: Cubic.easeIn})
 						
-						// TweenMax.set("#animate2_2_info", {opacity:0});
-						// var tween_image2 = new TimelineMax()
-						// 	.to("#animate2_2_info", 10, {opacity: 1, delay: 10})
+						TweenMax.set("#animate2_2_info", {opacity:0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate2_2_info", 4, {opacity: 1, delay: 5})
+							.to("#animate2_2_info", 1, {})
+
+						TweenMax.set("#animate2_3", {opacity:0, top: "620px"});
+						var tween_image3 = new TimelineMax()
+							.to("#animate2_3", 4, {opacity: 1, top:590, delay: 4})
+							.to("#animate2_3", 0.5, {opacity: 0.6, top:580, delay: 1.5})
 						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger2",
 							triggerHook: 0.0,
-							duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
+							duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
 							reverse: true
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
@@ -112,12 +122,15 @@
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						// new ScrollMagic.Scene(sceneOption)
-						// 				.setTween(tween_image1)
-						// 				.addTo(controller);
-						// new ScrollMagic.Scene(sceneOption)
-						// 				.setTween(tween_image2)
-						// 				.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image2)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image3)
+										.addTo(controller);
 					</script>
 				</section>
 
