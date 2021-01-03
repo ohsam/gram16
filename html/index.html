@@ -455,21 +455,21 @@
 						<div class="blank"></div>
 						<div id="animate15_1" class="performance" style="top:50px;">
 							<ul class="list">
-								<li class="type1">
-									<strong class="txt" style="top:0">11세대 인텔® 코어™ <br>프로세서</strong>
-									<div class="image" style="top:0"><img src="../assets/img/scene_15_01.png" alt=""></div>
+								<li class="type1" style="top:0">
+									<strong class="txt">11세대 인텔® 코어™ <br>프로세서</strong>
+									<div class="image"><img src="../assets/img/scene_15_01.png" alt=""></div>
 								</li>
-								<li class="type1">
-									<strong class="txt" style="top:0">차세대 그래픽 <br>인텔® Iris® Xe 그래픽</strong>
-									<div class="image" style="top:0"><img src="../assets/img/scene_15_02.png" alt=""></div>
+								<li class="type1" style="top:0">
+									<strong class="txt">차세대 그래픽 <br>인텔® Iris® Xe 그래픽</strong>
+									<div class="image"><img src="../assets/img/scene_15_02.png" alt=""></div>
 								</li>
-								<li class="type2">
-									<strong class="txt" style="top:0">강력한 LPDDR4x 메모리</strong>
-									<div class="image" style="top:0"><img src="../assets/img/scene_15_03.png" alt=""></div>
+								<li class="type2" style="top:0">
+									<strong class="txt">강력한 LPDDR4x 메모리</strong>
+									<div class="image"><img src="../assets/img/scene_15_03.png" alt=""></div>
 								</li>
-								<li class="type2">
-									<strong class="txt" style="top:0">최대 5.3배 빠른 NVMe™ SSD</strong>
-									<div class="image" style="top:0"><img src="../assets/img/scene_15_04.png" alt=""></div>
+								<li class="type2" style="top:0">
+									<strong class="txt">최대 5.3배 빠른 NVMe™ SSD</strong>
+									<div class="image"><img src="../assets/img/scene_15_04.png" alt=""></div>
 								</li>
 							</ul>
 						</div>
@@ -478,6 +478,30 @@
 							<p>* 이해를 돕기 위해 연출된 이미지입니다</p>
 						</div>
 					</div>
+					<script>
+						// tween_anchor
+						var tween_anchor = TweenMax.staggerFromTo("#animate15_1 li", 0.8, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
+
+						// tween_desc
+						TweenMax.set("#animate15_2", {bottom: "-30px", opacity: 0});
+						var tween_desc = new TimelineMax()
+							.to("#animate15_2", 0.5, {bottom: "0", opacity: 1, delay: 1.5, ease: Cubic.easeOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger15",
+							triggerHook: 0.6,
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_anchor)
+										.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_desc)
+										.addTo(controller);
+
+					</script>
 				</section>
 					
 				<section id="scene16" class="motionContent">

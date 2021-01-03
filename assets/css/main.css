@@ -137,7 +137,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate15 .blank {height:700px;}
 #animate15 .performance {position:absolute;width:100%;}
 #animate15 .list {padding:0 30px;}
-#animate15 .list li {padding:30px 0;}
+#animate15 .list li {position:relative;padding:30px 0;}
 #animate15 .list li:after {content:"";display:block;clear:both;}
 #animate15 .list li + li {border-top:1px solid #303030;}
 #animate15 .list .txt {position:relative;font-size:20px;color:#fff;}
