@@ -125,6 +125,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate13 .image {position:absolute;margin-bottom:50px;left:25px;width:calc(100% - 50px);border-radius:15px;overflow:hidden;}
 #animate13 .image img {display:block;width:100%;}
 
+#scene14,
 #animate14 {background-color:#000;}
 #animate14 .blank {padding-top:183px;padding-bottom:91.2%;}
 #animate14 .title .small {color:#999;}
