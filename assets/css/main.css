@@ -154,8 +154,9 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate16 .blank {padding-top:260px;padding-bottom:calc(94.5% + 146px);}
 #animate16 .title .small {color:#999;}
 #animate16 .port {position:absolute;margin-bottom:146px;left:0;width:100%;}
+#animate16 .port .image {display:block;}
+#animate16 .port .image img {display:block;width:100vw;}
 #animate16 .port .image.first {position:relative;}
 #animate16 .port .image.last {position:absolute;top:0;}
-#animate16 .port .image img {display:block;width:100vw;}
 #animate16 .desc {position:absolute;margin-bottom:75px;left:0;width:100%;padding:0 20px;font-size:12px;}
 #animate16 .desc p + p {margin-top:3px;padding-left:8px;text-indent:-8px;}

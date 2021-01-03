@@ -498,6 +498,46 @@
 							<p>* 썬더볼트4 제조사에서 측정한 값이며 실제 측정값과 다를 수 있음</p>
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate16_1", {opacity:0, top: "160"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate16_1", 0.8, {top: 60, opacity: 1, ease: Cubic.easeInOut})
+
+						// tween_image
+						TweenMax.set("#animate16_2 .first", {left: "-80px", opacity: 0});
+						var tween_image1 = new TimelineMax()
+							.to("#animate16_2 .first", 0.8, {left:0, opacity: 1, delay: 0.8, ease: Cubic.easeOut})
+
+						TweenMax.set("#animate16_2 .last", {left: "80px", opacity: 0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate16_2 .last", 0.8, {left:0, opacity: 0.8, delay: 1.2, ease: Cubic.easeOut})
+
+						// tween_desc
+						TweenMax.set("#animate16_3", {bottom: "-30px", opacity: 0});
+						var tween_desc = new TimelineMax()
+							.to("#animate16_3", 0.5, {bottom: "0", opacity: 1, delay: 2, ease: Cubic.easeOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger16",
+							triggerHook: 0.6,
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addIndicators({name: "16 (duration: 0)"}) // add indicators (requires plugin)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image2)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_desc)
+										.addTo(controller);
+					</script>
 				</section>
 
 				<div class="spacer s_viewport"></div>
