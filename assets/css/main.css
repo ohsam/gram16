@@ -11,18 +11,43 @@
 
 .title {
     position:absolute;
-    font-size: 32px;
+    left: 25px;
+    font-size: 30px;
     font-weight: 700;
 }
+.white {color:#fff;}
+.grey, .gray {color:#888;}
+
+i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url("../img/ico_circArrow_down.png") center center no-repeat;background-size:contain;}
+
+#animate1 {height:530px;background:#31302e;}
+#animate1_1 {z-index:2;}
+#animate1_2 {position:absolute;width:100%;top:175px;z-index:1;}
+#animate1_2 > li {position:absolute;left:25px;}
+#animate1_2 > li a {display:block;}
+#animate1_2 > li .sub {font-size:23px;font-weight:900;color:#fff;}
+#animate1_2 > li .sub em {margin-left:4px;font-size:12px;font-weight:700;font-style:normal;}
+#animate1_2 > li .desc {color:#b0b3b8;}
+#animate1_2 > li .desc i {margin-left:5px;vertical-align: middle;}
+#animate1_3 {position:relative;height:530px;overflow: hidden;z-index:0;}
+#animate1_3 img {position:absolute;bottom:0;right:0;width:360px;height:530px;}
 
 #animate2 {height:640px;overflow:hidden;background:#fff;}
-#animate2_1 {position:absolute;left:25px;}
+#animate2_1 {}
 #animate2_2 {position:absolute;left:50%;/*top:-45px;*/}
 #animate2_2 > img {position:absolute;left:-700px;top:0;}
 #animate2_2_info {position:absolute;}
 #animate2_3 {position:absolute;left:25px;/*top:590px;*/}
 
-#animate3 {
-    height: 800px;
-    background:yellow;
+#animate3 {height: 450px;background:#fff;}
+#animate3_1 {position:absolute;left:25px;top:50px;width:calc(100% - 50px);min-height:420px;overflow-y:hidden;}
+#animate3_1 img {width:100%;}
+#animate3_1_first {position:relative;z-index:1;}
+#animate3_1_other {position:absolute;left:0;top:-20px;z-index:0;}
+#animate3_2 {position:absolute;left:25px;top:50px;width:calc(100% - 50px);min-height:420px;overflow-y:hidden;}
+#animate3_2 img {width:100%;}
+
+#animate4 {
+    height: 830px;
+    background:green;
 }

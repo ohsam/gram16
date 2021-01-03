@@ -31,7 +31,7 @@
 					<div id="description">
 						<h1>LG Gram16</h1>
 						<h2>2021년 LG 그램 16  제품 콘텐츠(USP) 개선 제안</h2>
-						<ol>
+						<ol class="grey">
 							<li>When no duration is defined for the scene, the tween will simply start playing when the scroll reaches the trigger position.</li>
 							<li>If the scene has a duration the progress of the tween will directly correspond to the scroll position.</li>
 						</ol>
@@ -44,43 +44,84 @@
                 
                 <section class="motionContent">
                     <div id="trigger1" class="spacer s0"></div>
-                    <div class="spacer s2"></div>
-                    <div id="animate1" class="">
-						<p>첫 박스</p>
-						<a href="#" class="viewsource">view source</a>
+                    <div id="animate1">
+						<div id="animate1_1" class="title white">
+							<p>더 넓게, 그리고<br/>더 가볍게</p>
+						</div>
+						<ul id="animate1_2">
+							<li style="top:60px">
+								<a href="#">
+									<div class="sub">11<em>%</em></div>
+									<div class="desc">더 커진 화면<i class="circ-arrow-down"></i></div>
+								</a>
+							</li>
+							<li style="top:120px">
+								<a href="#">
+									<div class="sub">1,190<em>g</em></div>
+									<div class="desc">세계 최경량 무게<i class="circ-arrow-down"></i></div>
+								</a>
+							</li>
+							<li style="top:180px">
+								<a href="#">
+									<div class="sub">200<em>%</em></div>
+									<div class="desc">더 선명하게<i class="circ-arrow-down"></i></div>
+								</a>
+							</li>
+							<li style="top:240px">
+								<a href="#">
+									<div class="sub">22<em>h</em></div>
+									<div class="desc">All day battery<i class="circ-arrow-down"></i></div>
+								</a>
+							</li>
+						</ul>
+						<div id="animate1_3">
+							<img src="../assets/img/00_salespoint.png" alt=""/>
+						</div>
                     </div>
 					<script>
-							// build scene
-							var scene = new ScrollMagic.Scene({
-                                                triggerElement: "#trigger1",
-                                                // duration: 300,
-                                                triggerHook: 0.6, // show, when scrolled 10% into view
-                                                reverse: true
-											})
-											.setTween("#animate1", 0.4, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
-											.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
-											.addTo(controller);
+						// tween_title
+						TweenMax.set("#animate1_1", {opacity:0, top: "160"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate1_1", 0.8, {top: 60, opacity: 1, ease: Cubic.easeInOut})
+
+						// tween_anchor
+						var tween_anchor = TweenMax.staggerFromTo("#animate1_2 > li", 0.8, {opacity:0}, {top:"-=60", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.12);
+
+						// tween_image
+						TweenMax.set("#animate1_3>img", {opacity:0, bottom: "-50px"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate1_3>img", 1, {opacity:1, bottom:0, ease: Cubic.easeOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger1",
+							triggerHook: 0.6,
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_anchor)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image1)
+										.addTo(controller);
+
 					</script>
 				</section>
 				<section id="scene2" class="motionContent">
-                    <!-- <style type="text/css">
-                        #animate2 {
-                            position:absolute;
-                            top: 60%;
-                            opacity: 0;
-                            transform: scale(0.9);
-                        }
-                    </style> -->
-					<div id="trigger2" class="spacer s0"></div>
+                    <div id="trigger2" class="spacer s0"></div>
 					<div id="animate2">
 						<div id="animate2_1" class="title">
 							<p>11% 더 커진<br/>16 대화면</p>
 						</div>
 						<div id="animate2_2">
-							<img id="animate2_2_info" src="../assets/img/scene_1_01_monitor_info.png" alt=""/>
 							<img src="../assets/img/scene_1_01_monitor.png" alt=""/>
+							<img id="animate2_2_info" src="../assets/img/scene_1_01_monitor_info.png" alt=""/>
 						</div>
-						<div id="animate2_3" class="desc">
+						<div id="animate2_3" class="desc grey">
 							<p>*16형 그램 16 기준: 40.6cm</p>
 							<p>*15형 울트라 PC(15U50N 기준): 39.6cm</p>
 						</div>
@@ -90,7 +131,7 @@
 						TweenMax.set("#animate2_1", {opacity:0, top: "160"});
                         var tween_title = new TimelineMax()
                             .to("#animate2_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut, delay: 2})
-							.to("#animate2_1", 2, {opacity: 0.6, top:-10, delay: 3})
+							.to("#animate2_1", 2, {opacity: 0.8, top:-10, delay: 3})
 							
 						// tween_image
 						TweenMax.set("#animate2_2", {scale: "1", top: "-45px"});
@@ -134,8 +175,65 @@
 					</script>
 				</section>
 
-				<section id="animate3" class="motionContent">
-					빈영역
+				<section id="scene3" class="motionContent">
+					<div id="trigger3" class="spacer s0"></div>
+					<div id="animate3">
+						<div id="animate3_1">
+							<img id="animate3_1_first" src="../assets/img/scene_3_01.png" alt=""/>
+							<img id="animate3_1_other" src="../assets/img/scene_3_02.png" alt=""/>
+						</div>
+						<div id="animate3_2">
+							<img src="../assets/img/scene_3_03.png" alt=""/>
+						</div>
+					</div>
+					<script>
+						// tween_image
+						TweenMax.set("#animate3_1_other", {top: "-20px"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate3_1_other", 5, {top:190, ease: Cubic.easeInOut})
+							.to("#animate3_1", 5, {left:"-100%", delay:5, ease: Cubic.easeInOut})
+						
+						TweenMax.set("#animate3_2", {left: "100%"});
+						var tween_image2 = new TimelineMax()
+							.to("#animate3_2", 3, {left:25, delay:7, ease: Cubic.easeInOut})
+							.to("#animate3_2", 4, {top:"-=100", opacity:0.6, delay:1, ease: Cubic.easeInOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger3",
+							triggerHook: 0.2,
+							duration: "180%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger3",
+							triggerHook: 0.5,
+							duration: "150%",
+							reverse: true
+						}
+						var sceneOption3 = {
+							triggerElement: "#trigger3",
+							triggerHook: 0.75,
+							duration: "270%",
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setPin("#animate3")
+										.addIndicators({name: "3 (duration: 100%)"})
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption3)
+										.setTween(tween_image2)
+										.addTo(controller);
+					</script>
+				</section>
+
+				<section id="scene4" class="motionContent">
+					<div id="animate4">
+						scene4
+					</div>
 				</section>
 
 				<div class="spacer s_viewport"></div>
