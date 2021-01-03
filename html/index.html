@@ -513,9 +513,6 @@
 						<div id="animate14_2" class="video" style="bottom:0;background-color:#c7e1ff;">
 							<video src="../assets/img/scene_14_video_dummy.mp4" width="100%" height="100%" controls></video>
 						</div>
-						<div id="animate14_3" class="image" style="bottom:0">
-							<img src="../assets/img/scene_14_01.png" alt="">
-						</div>
 					</div>
 				</section>
 					
@@ -523,39 +520,45 @@
 					<div id="trigger15" class="spacer s0"></div>
 					<div id="animate15">
 						<div class="blank"></div>
-						<div id="animate15_1" class="performance" style="top:50px;">
-							<ul class="list">
-								<li class="type1" style="top:0">
-									<strong class="txt">11세대 인텔® 코어™ <br>프로세서</strong>
-									<div class="image"><img src="../assets/img/scene_15_01.png" alt=""></div>
-								</li>
-								<li class="type1" style="top:0">
-									<strong class="txt">차세대 그래픽 <br>인텔® Iris® Xe 그래픽</strong>
-									<div class="image"><img src="../assets/img/scene_15_02.png" alt=""></div>
-								</li>
-								<li class="type2" style="top:0">
-									<strong class="txt">강력한 LPDDR4x 메모리</strong>
-									<div class="image"><img src="../assets/img/scene_15_03.png" alt=""></div>
-								</li>
-								<li class="type2" style="top:0">
-									<strong class="txt">최대 5.3배 빠른 NVMe™ SSD</strong>
-									<div class="image"><img src="../assets/img/scene_15_04.png" alt=""></div>
-								</li>
-							</ul>
+						<div id="animate15_1" class="icons" style="top:0">
+							<img src="../assets/img/scene_15_01.png" alt="">
 						</div>
-						<div id="animate15_2" class="desc grey" style="bottom:0;">
+						<ul id="animate15_2" class="performance" style="bottom:0;">
+							<li class="type1" style="top:0">
+								<strong class="txt">11세대 인텔® 코어™ <br>프로세서</strong>
+								<div class="image"><img src="../assets/img/scene_15_02.png" alt=""></div>
+							</li>
+							<li class="type1" style="top:0">
+								<strong class="txt">차세대 그래픽 <br>인텔® Iris® Xe 그래픽</strong>
+								<div class="image"><img src="../assets/img/scene_15_03.png" alt=""></div>
+							</li>
+							<li class="type2" style="top:0">
+								<strong class="txt">강력한 LPDDR4x 메모리</strong>
+								<div class="image"><img src="../assets/img/scene_15_04.png" alt=""></div>
+							</li>
+							<li class="type2" style="top:0">
+								<strong class="txt">최대 5.3배 빠른 NVMe™ SSD</strong>
+								<div class="image"><img src="../assets/img/scene_15_05.png" alt=""></div>
+							</li>
+						</ul>
+						<div id="animate15_3" class="desc grey" style="bottom:0;">
 							<p>* 그래픽 성능, SSD 속도는 이론상 수치 또는 제조사에서 측정한 값이며 실제 측정값과 다를 수 있음</p>
 							<p>* 이해를 돕기 위해 연출된 이미지입니다</p>
 						</div>
 					</div>
 					<script>
+						// tween_image
+						TweenMax.set("#animate15_1", {top: "100px", opacity: 0});
+						var tween_image1 = new TimelineMax()
+							.to("#animate15_1", 1, {top:0, opacity: 1, delay: 0.6, ease: Cubic.easeOut})
+
 						// tween_anchor
-						var tween_anchor = TweenMax.staggerFromTo("#animate15_1 li", 0.8, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
+						var tween_anchor = TweenMax.staggerFromTo("#animate15_2 li", 1.8, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
 
 						// tween_desc
-						TweenMax.set("#animate15_2", {bottom: "-30px", opacity: 0});
+						TweenMax.set("#animate15_3", {bottom: "-30px", opacity: 0});
 						var tween_desc = new TimelineMax()
-							.to("#animate15_2", 0.5, {bottom: "0", opacity: 1, delay: 1.5, ease: Cubic.easeOut})
+							.to("#animate15_3", 1.5, {bottom: "0", opacity: 1, delay: 1.5, ease: Cubic.easeOut})
 
 						// build scene
 						var sceneOption = {
@@ -564,8 +567,11 @@
 							reverse: true
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_anchor)
+										.setTween(tween_image1)
 										.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_anchor)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_desc)

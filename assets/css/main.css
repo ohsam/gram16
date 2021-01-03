@@ -126,27 +126,27 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate13 .image img {display:block;width:100%;}
 
 #animate14 {background-color:#000;}
-#animate14 .blank {padding-top:183px;padding-bottom:calc(91.2% + 63.2%);}
+#animate14 .blank {padding-top:183px;padding-bottom:91.2%;}
 #animate14 .title .small {color:#999;}
-#animate14 .video {position:absolute;margin-bottom:63.2%;left:0;width:100%;padding-bottom:91.2%;}
+#animate14 .video {position:absolute;left:0;width:100%;padding-bottom:91.2%;}
 #animate14 .video video {position:absolute;top:0;left:0;width:100%;height:100%;}
-#animate14 .image {position:absolute;left:0;}
-#animate14 .image img {display:block;width:100%;}
 
 #animate15 {background-color:#000;}
-#animate15 .blank {height:700px;}
-#animate15 .performance {position:absolute;width:100%;}
-#animate15 .list {padding:0 30px;}
-#animate15 .list li {position:relative;padding:30px 0;}
-#animate15 .list li:after {content:"";display:block;clear:both;}
-#animate15 .list li + li {border-top:1px solid #303030;}
-#animate15 .list .txt {position:relative;font-size:20px;color:#fff;}
-#animate15 .list .image {position:relative;}
-#animate15 .list .image img {display:block;width:100%;}
-#animate15 .list .type1 .txt {float:left;width:calc(100% - 70px);padding-top:4px;}
-#animate15 .list .type1 .image {float:right;width:70px;}
-#animate15 .list .type2 .txt {width:100%;}
-#animate15 .list .type2 .image {margin-top:12px;width:300px;}
+#animate15 .blank {height:50px;padding-top:63.2%;padding-bottom:662px;box-sizing:content-box;}
+#animate15 .icons {position:absolute;left:0;}
+#animate15 .icons img {display:block;width:100%;}
+#animate15 .performance {position:absolute;margin-bottom:75px;left:0;width:100%;}
+#animate15 .performance {padding:0 30px;}
+#animate15 .performance li {position:relative;padding:30px 0;}
+#animate15 .performance li:after {content:"";display:block;clear:both;}
+#animate15 .performance li + li {border-top:1px solid #303030;}
+#animate15 .performance .txt {position:relative;font-size:20px;color:#fff;}
+#animate15 .performance .image {position:relative;}
+#animate15 .performance .image img {display:block;width:100%;}
+#animate15 .performance .type1 .txt {float:left;width:calc(100% - 75px);padding-top:4px;}
+#animate15 .performance .type1 .image {float:right;width:75px;}
+#animate15 .performance .type2 .txt {width:100%;}
+#animate15 .performance .type2 .image {margin-top:12px;width:300px;}
 #animate15 .desc {position:absolute;left:0;width:100%;padding:0 20px;font-size:12px;}
 #animate15 .desc p + p {margin-top:3px;padding-left:8px;text-indent:-8px;}
 
