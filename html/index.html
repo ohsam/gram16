@@ -488,14 +488,57 @@
 					<div id="trigger13" class="spacer s0"></div>
 					<div id="animate13">
 						<div class="blank"></div>
-						<div id="animate13_1" class="title" style="top:60px">
+						<div id="animate13_1" class="title">
 							<h2>사소한 것도<br />놓치지 않는 디테일</h2>
 							<p class="small">확 넓어진 터치패드</p>
 						</div>
-						<div id="animate13_2" class="image" style="bottom:0">
+						<div id="animate13_2" class="image">
 							<img src="../assets/img/scene_13_01.png" alt="">
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate13_1", {opacity:0, top: "100"});
+						var tween_title = new TimelineMax()
+							.to("#animate13_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
+							.to("#animate13_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+
+						//tween_image
+						TweenMax.set("#animate13_2", {opacity: 0.6, top:"262"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate13_2", 2.5, {opacity:1, top:212, ease: Cubic.easeInOut})
+							.to("#animate13_2", 1, {opacity: 0.6, delay: 6.5})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger13",
+							triggerHook: 0,
+							duration: "50%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger13",
+							triggerHook: 0.7,
+							duration: "120%",
+							reverse: true
+						}
+						var sceneOption3 = {
+							triggerElement: "#trigger13",
+							triggerHook: 0.4,
+							duration: "110%",
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setPin("#animate13")
+										.addIndicators({name: "13 (duration: 100%)"})
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption3)
+										.setTween(tween_image1)
+										.addTo(controller);
+					</script>
 				</section>
 					
 				<section id="scene14" class="motionContent">
