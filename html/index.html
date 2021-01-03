@@ -236,9 +236,79 @@
 							<p class="small">4면 슬림 베젤 디자인</p>
 						</div>
 						<div id="animate4_2" class="video" style="bottom:0;background-color:#c7e1ff;">
-							<video src="../assets/img/scene_4_video_dummy.mp4" width="100%" height="100%" controls></video>
+							<video id="animate4_2_video" src="../assets/img/scene_4_video_dummy.mp4" width="100%" height="100%" loop></video>
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate4_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate4_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
+							.to("#animate4_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+
+						//tween_image
+						TweenMax.set("#animate4_2", {opacity: 0.6, top:"260"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate4_2", 2.5, {opacity:1, top:210, ease: Cubic.easeInOut})
+							.to("#animate4_2", 1, {opacity: 0.6, delay: 6.5})
+						
+						// TweenMax.set("#animate3_2", {left: "100%"});
+						// var tween_image2 = new TimelineMax()
+						// 	.to("#animate3_2", 3, {left:25, delay:7, ease: Cubic.easeInOut})
+						// 	.to("#animate3_2", 4, {top:"-=100", opacity:0.6, delay:1, ease: Cubic.easeInOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger4",
+							triggerHook: 0,
+							duration: "50%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger4",
+							triggerHook: 0.7,
+							duration: "120%",
+							reverse: true
+						}
+						var sceneOption3 = {
+							triggerElement: "#trigger4",
+							triggerHook: 0.4,
+							duration: "110%",
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setPin("#animate4")
+										.addIndicators({name: "4 (duration: 100%)"})
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption3)
+										.setTween(tween_image1)
+										.addIndicators({name: "4 video (duration: 100%)"})
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate4_2_video").get(0).play();
+											}else{
+												$("#animate4_2_video").get(0).pause();
+											}
+										})
+										.on("start end", function (e) {
+											if(e.type == "start"){
+												console.log('last Hit:: top');
+											}else{
+												console.log('last Hit:: bottom');
+											}
+										})
+										.on("progress", function (e) {
+											console.log('progress');
+										});
+					</script>
 				</section>
 					
 				<section id="scene5" class="motionContent">
