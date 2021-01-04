@@ -168,6 +168,9 @@
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_image2)
 										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image3)
+										.addTo(controller);
 					</script>
 				</section>
 
@@ -424,7 +427,7 @@
 							<div class="image last">
 								<img src="../assets/img/scene_7_02.png" alt="">
 							</div>
-							<div class="image first" style="width:40%;">
+							<div id="animate7_2_blur" class="image first" style="width:100%;">
 								<img src="../assets/img/scene_7_01.png" alt="">
 							</div>
 							<!-- <a class="drag" style="left:40%;">
@@ -444,6 +447,11 @@
 						var tween_image1 = new TimelineMax()
 							.to("#animate7_2", 3, {opacity:1, top:236})
 							.to("#animate7_2", 1, {opacity: 0.6, delay: 6})
+
+						TweenMax.set("#animate7_2_blur", {width:"100%"});
+						var tween_image2 = new TimelineMax()
+							.to("#animate7_2_blur", 8, {width:"0%", delay:2})
+							// .to("#animate7_2_blur", 1, {opacity: 0.6, delay: 6})
 						
 						// build scene
 						var sceneOption = {
@@ -463,6 +471,9 @@
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image2)
 										.addTo(controller);
 					</script>
 				</section>

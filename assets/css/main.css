@@ -34,7 +34,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate1_3 {position:relative;height:530px;overflow: hidden;z-index:0;}
 #animate1_3 img {position:absolute;bottom:0;right:0;width:360px;height:530px;}
 
-#animate2 {height:640px;overflow:hidden;background:#fff;}
+#animate2 {height:650px;overflow:hidden;background:#fff;}
 #animate2_1 {}
 #animate2_2 {position:absolute;left:50%;/*top:-45px;*/}
 #animate2_2 > img {position:absolute;left:-700px;top:0;}
