@@ -22,7 +22,12 @@
     
     <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-  	<script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+	  
+	  
+	<link rel="stylesheet" href="../assets/css/twentytwenty.css" type="text/css">
+    <script type="text/javascript" src="../assets/js/lib/twentytwenty/jquery.event.move.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/twentytwenty/jquery.twentytwenty.js"></script>
 </head>
 <body>
 	<div id="content-wrapper">
@@ -397,15 +402,10 @@
 							<h2>사이즈는 줄이고<br />화면은 크게<br />반전매력, 역시 gram</h2>
 						</div>
 						<div id="animate6_2" class="divider" style="bottom:0;">
-							<div class="image last">
+							<div class="container">
+								<img src="../assets/img/scene_6_01.png" alt="">
 								<img src="../assets/img/scene_6_02.png" alt="">
 							</div>
-							<div class="image first" style="width:40%;">
-								<img src="../assets/img/scene_6_01.png" alt="">
-							</div>
-							<a class="drag" style="left:40%;">
-								<img src="../assets/img/scene_6_03.png" alt="">
-							</a>
 						</div>
 					</div>
 					<script>
@@ -440,6 +440,10 @@
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
+
+						$(window).on("load", function(){
+							$('.container').twentytwenty({ default_offset_pct : 0.4 });
+						});
 					</script>
 				</section>
 					
