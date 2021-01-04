@@ -51,25 +51,25 @@
 						</div>
 						<ul id="animate1_2">
 							<li style="top:60px">
-								<a href="#">
+								<a href="#" data-scroll-from="#animate2_scroll_from", data-scroll-to="#animate2_scroll_to">
 									<div class="sub">11<em>%</em></div>
 									<div class="desc">더 커진 화면<i class="circ-arrow-down"></i></div>
 								</a>
 							</li>
 							<li style="top:120px">
-								<a href="#">
+								<a href="#" data-scroll-from="#animate5_scroll_from", data-scroll-to="#animate5_scroll_to">
 									<div class="sub">1,190<em>g</em></div>
 									<div class="desc">세계 최경량 무게<i class="circ-arrow-down"></i></div>
 								</a>
 							</li>
 							<li style="top:180px">
-								<a href="#">
+								<a href="#" data-scroll-from="#animate7_scroll_from", data-scroll-to="#animate7_scroll_to">
 									<div class="sub">200<em>%</em></div>
 									<div class="desc">더 선명하게<i class="circ-arrow-down"></i></div>
 								</a>
 							</li>
 							<li style="top:240px">
-								<a href="#">
+								<a href="#" data-scroll-from="#animate10_scroll_from", data-scroll-to="#animate10_scroll_to">
 									<div class="sub">22<em>h</em></div>
 									<div class="desc">All day battery<i class="circ-arrow-down"></i></div>
 								</a>
@@ -110,10 +110,27 @@
 										.setTween(tween_image1)
 										.addTo(controller);
 
+						$("#animate1_2 a").on("click", function(e){
+							e.preventDefault();
+							var fromTop = $($(this).attr("data-scroll-from")).offset().top;
+							var toTop = $($(this).attr("data-scroll-to")).offset().top;
+							var time = Math.ceil((toTop-fromTop)*1.2);
+
+							console.log(time)
+
+							$("html, body").animate({
+								scrollTop: fromTop
+							}, 0).animate({
+								scrollTop: toTop
+							}, time, "swing");
+						})
+
 					</script>
 				</section>
 				<section id="scene2" class="motionContent">
                     <div id="trigger2" class="spacer s0"></div>
+					<div id="animate2_scroll_from" style="position:absolute;top:150px;left:0;"></div>
+					<div id="animate2_scroll_to" style="position:absolute;top:520px;left:0;"></div>
 					<div id="animate2">
 						<div id="animate2_1" class="title">
 							<h2>11% 더 커진<br/>16 대화면</h2>
@@ -299,6 +316,8 @@
 					
 				<section id="scene5" class="motionContent">
 					<div id="trigger5" class="spacer s0"></div>
+					<div id="animate5_scroll_from" style="position:absolute;top:-480px;left:0"></div>
+					<div id="animate5_scroll_to" style="position:absolute;top:30px;left:0"></div>
 					<div id="animate5">
 						<div class="blank"></div>
 						<div id="animate5_1" class="title" style="top:60px">
@@ -418,6 +437,8 @@
 					
 				<section id="scene7" class="motionContent">
 					<div id="trigger7" class="spacer s0"></div>
+					<div id="animate7_scroll_from" style="position:absolute;top:-500px;left:0"></div>
+					<div id="animate7_scroll_to" style="position:absolute;top:30px;left:0"></div>
 					<div id="animate7">
 						<div class="blank"></div>
 						<div id="animate7_1" class="title" style="top:60px">
@@ -627,6 +648,8 @@
 					
 				<section id="scene10" class="motionContent">
 					<div id="trigger10" class="spacer s0"></div>
+					<div id="animate10_scroll_from" style="position:absolute;top:-480px;left:0"></div>
+					<div id="animate10_scroll_to" style="position:absolute;top:30px;left:0"></div>
 					<div id="animate10">
 						<div class="blank"></div>
 						<div id="animate10_1" class="title">
