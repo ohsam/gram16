@@ -241,20 +241,19 @@
 						// tween_title
 						TweenMax.set("#animate4_1", {opacity:0, top: "100"});
                         var tween_title = new TimelineMax()
-                            .to("#animate4_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate4_1", 3, {top: 0, opacity: 0.7, delay: 4, ease: Cubic.easeInOut})
+                            .to("#animate4_1", 3, {top: 60, opacity: 1})
+							.to("#animate4_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
 						TweenMax.set("#animate4_2", {opacity: 0.6, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate4_2", 2.5, {opacity:1, top:210, ease: Cubic.easeInOut})
-							.to("#animate4_2", 1.5, {top:150, delay: 5})
-							.to("#animate4_2", 1, {opacity: 0.6})
+							.to("#animate4_2", 3, {opacity:1, top:210})
+							.to("#animate4_2", 1, {opacity: 0.6, delay: 6})
 						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger4",
-							triggerHook: 0.7,
+							triggerHook: 0.6,
 							duration: "70%",
 							reverse: true
 						}
@@ -303,7 +302,7 @@
 							<p class="small">최경량 1,190g 무게</p>
 						</div>
 						<div id="animate5_2" class="video" style="bottom:0;background-color:#c7e1ff;">
-							<video id="animate5_2_video" src="../assets/img/scene_5_video_dummy.mp4" muted="muted" width="100%" height="100%" controls></video>
+							<video id="animate5_2_video" src="../assets/img/scene_5_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 						<div id="animate5_3" class="logo" style="bottom:0;">
 							<img src="../assets/img/scene_5_01.png" alt="">
@@ -317,20 +316,19 @@
 						// tween_title
 						TweenMax.set("#animate5_1", {opacity:0, top: "100"});
                         var tween_title = new TimelineMax()
-                            .to("#animate5_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate5_1", 3, {top: 0, opacity: 0.7, delay: 4, ease: Cubic.easeInOut})
+                            .to("#animate5_1", 3, {top: 60, opacity: 1})
+							.to("#animate5_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
 						TweenMax.set("#animate5_2", {opacity: 0.6, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate5_2", 2.5, {opacity:1, top:210, ease: Cubic.easeInOut})
-							.to("#animate5_2", 1.5, {top:150, delay: 5})
-							.to("#animate5_2", 1, {opacity: 0.6})
+							.to("#animate5_2", 3, {opacity:1, top:210})
+							.to("#animate5_2", 1, {opacity: 0.6, delay: 6})
 						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger5",
-							triggerHook: 0.7,
+							triggerHook: 0.6,
 							duration: "70%",
 							reverse: true
 						}
@@ -379,6 +377,39 @@
 							</a>
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate6_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate6_1", 3, {top: 60, opacity: 1})
+							.to("#animate6_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate6_2", {opacity: 0.6, top:"264"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate6_2", 3, {opacity:1, top:214})
+							.to("#animate6_2", 1, {opacity: 0.6, delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger6",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger6",
+							triggerHook: 0.4,
+							duration: "60%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+					</script>
 				</section>
 					
 				<section id="scene7" class="motionContent">
@@ -401,6 +432,39 @@
 							</a> -->
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate7_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate7_1", 3, {top: 60, opacity: 1})
+							.to("#animate7_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate7_2", {opacity: 0.6, top:"286"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate7_2", 3, {opacity:1, top:236})
+							.to("#animate7_2", 1, {opacity: 0.6, delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger7",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger7",
+							triggerHook: 0.4,
+							duration: "60%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+					</script>
 				</section>
 					
 				<section id="scene8" class="motionContent">
@@ -413,9 +477,53 @@
 							<a href="" class="button">DCI-P3 알아보기</a>
 						</div>
 						<div id="animate8_2" class="video" style="bottom:0;background-color:#c7e1ff;">
-							<video src="../assets/img/scene_8_video_dummy.mp4" muted="muted" width="100%" height="100%" controls></video>
+							<video id="animate8_2_video" src="../assets/img/scene_8_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate8_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate8_1", 3, {top: 60, opacity: 1})
+							.to("#animate8_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate8_2", {opacity: 0.6, top:"314"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate8_2", 3, {opacity:1, top:264})
+							.to("#animate8_2", 1, {opacity: 0.6, delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger8",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger8",
+							triggerHook: 0.4,
+							duration: "60%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate8_2_video").get(0).play();
+											}else{
+												$("#animate8_2_video").get(0).pause();
+											}
+										});
+					</script>
 				</section>
 					
 				<section id="scene9" class="motionContent">
@@ -456,6 +564,39 @@
 							</ul>
 						</div>
 					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate9_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate9_1", 3, {top: 60, opacity: 1})
+							.to("#animate9_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate9_2", {opacity: 0.6, top:"260"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate9_2", 3, {opacity:1, top:210})
+							.to("#animate9_2", 1, {opacity: 0.6, delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger9",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger9",
+							triggerHook: 0.4,
+							duration: "60%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+					</script>
 				</section>
 					
 				<section id="scene10" class="motionContent">
