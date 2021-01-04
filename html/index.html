@@ -100,7 +100,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
-										.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+										//.addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_anchor)
@@ -158,7 +158,6 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate2")
-										.addIndicators({name: "2 (duration: 300)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
@@ -216,7 +215,6 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate3")
-										.addIndicators({name: "3 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
@@ -244,44 +242,33 @@
 						TweenMax.set("#animate4_1", {opacity:0, top: "100"});
                         var tween_title = new TimelineMax()
                             .to("#animate4_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate4_1", 1.5, {opacity: 0.7, delay: 5.5, ease: Cubic.easeInOut})
+							.to("#animate4_1", 3, {top: 0, opacity: 0.7, delay: 4, ease: Cubic.easeInOut})
 
 						//tween_image
 						TweenMax.set("#animate4_2", {opacity: 0.6, top:"260"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate4_2", 2.5, {opacity:1, top:210, ease: Cubic.easeInOut})
-							.to("#animate4_2", 1, {top:150, delay: 5})
-							.to("#animate4_2", 1.5, {opacity: 0.6})
+							.to("#animate4_2", 1.5, {top:150, delay: 5})
+							.to("#animate4_2", 1, {opacity: 0.6})
 						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger4",
-							triggerHook: 0,
-							duration: "50%",
+							triggerHook: 0.7,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger4",
-							triggerHook: 0.7,
-							duration: "120%",
-							reverse: true
-						}
-						var sceneOption3 = {
-							triggerElement: "#trigger4",
 							triggerHook: 0.4,
-							duration: "110%",
+							duration: "60%",
 							reverse: true
 						}
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate4")
-										.addIndicators({name: "4 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
-										.addIndicators({name: "4 video (duration: 100%)"})
 										.addTo(controller)
 										.on("update", function (e) {
 											//console.log(e.target.controller().info("scrollDirection"));
@@ -316,7 +303,7 @@
 							<p class="small">최경량 1,190g 무게</p>
 						</div>
 						<div id="animate5_2" class="video" style="bottom:0;background-color:#c7e1ff;">
-							<video src="../assets/img/scene_5_video_dummy.mp4" muted="muted" width="100%" height="100%" controls></video>
+							<video id="animate5_2_video" src="../assets/img/scene_5_video_dummy.mp4" muted="muted" width="100%" height="100%" controls></video>
 						</div>
 						<div id="animate5_3" class="logo" style="bottom:0;">
 							<img src="../assets/img/scene_5_01.png" alt="">
@@ -327,7 +314,49 @@
 						</div>
 					</div>
 					<script>
-						//
+						// tween_title
+						TweenMax.set("#animate5_1", {opacity:0, top: "100"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate5_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
+							.to("#animate5_1", 3, {top: 0, opacity: 0.7, delay: 4, ease: Cubic.easeInOut})
+
+						//tween_image
+						TweenMax.set("#animate5_2", {opacity: 0.6, top:"260"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate5_2", 2.5, {opacity:1, top:210, ease: Cubic.easeInOut})
+							.to("#animate5_2", 1.5, {top:150, delay: 5})
+							.to("#animate5_2", 1, {opacity: 0.6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger5",
+							triggerHook: 0.7,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger5",
+							triggerHook: 0.4,
+							duration: "60%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate5_2_video").get(0).play();
+											}else{
+												$("#animate5_2_video").get(0).pause();
+											}
+										});
 					</script>
 				</section>
 					
@@ -475,14 +504,14 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate10")
-										.addIndicators({name: "10 (duration: 100%)"})
+										//.addIndicators({name: "10 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption3)
 										.setTween(tween_image1)
-										.addIndicators({name: "10 video (duration: 100%)"})
+										//.addIndicators({name: "10 video (duration: 100%)"})
 										.addTo(controller)
 										.on("update", function (e) {
 											//console.log(e.target.controller().info("scrollDirection"));
@@ -494,16 +523,6 @@
 											}else{
 												$("#animate10_2_video").get(0).pause();
 											}
-										})
-										.on("start end", function (e) {
-											if(e.type == "start"){
-												console.log('last Hit:: top');
-											}else{
-												console.log('last Hit:: bottom');
-											}
-										})
-										.on("progress", function (e) {
-											console.log('progress');
 										});
 					</script>
 				</section>
@@ -583,7 +602,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate11")
-										.addIndicators({name: "11 (duration: 100%)"})
+										//.addIndicators({name: "11 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
@@ -643,7 +662,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate12")
-										.addIndicators({name: "12 (duration: 100%)"})
+										//.addIndicators({name: "12 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
@@ -700,7 +719,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate13")
-										.addIndicators({name: "13 (duration: 100%)"})
+										//.addIndicators({name: "13 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
@@ -757,14 +776,14 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate14")
-										.addIndicators({name: "14 (duration: 100%)"})
+										//.addIndicators({name: "14 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption3)
 										.setTween(tween_image1)
-										.addIndicators({name: "14 video (duration: 100%)"})
+										//.addIndicators({name: "14 video (duration: 100%)"})
 										.addTo(controller)
 										.on("update", function (e) {
 											//console.log(e.target.controller().info("scrollDirection"));
@@ -776,16 +795,6 @@
 											}else{
 												$("#animate14_2_video").get(0).pause();
 											}
-										})
-										.on("start end", function (e) {
-											if(e.type == "start"){
-												console.log('last Hit:: top');
-											}else{
-												console.log('last Hit:: bottom');
-											}
-										})
-										.on("progress", function (e) {
-											console.log('progress');
 										});
 					</script>
 				</section>
@@ -842,7 +851,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_image1)
-										.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
+										//.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_anchor)
@@ -900,7 +909,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
-										.addIndicators({name: "16 (duration: 0)"}) // add indicators (requires plugin)
+										//.addIndicators({name: "16 (duration: 0)"}) // add indicators (requires plugin)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_image1)
