@@ -134,8 +134,8 @@
 				</section>
 				<section id="scene2" class="motionContent">
                     <div id="trigger2" class="spacer s0"></div>
-					<div id="animate2_scroll_from" style="position:absolute;top:150px;left:0;"></div>
-					<div id="animate2_scroll_to" style="position:absolute;top:520px;left:0;"></div>
+					<div id="animate2_scroll_from" style="position:absolute;top:190px;left:0;"></div>
+					<div id="animate2_scroll_to" style="position:absolute;top:540px;left:0;"></div>
 					<div id="animate2">
 						<div id="animate2_1" class="title">
 							<h2>11% 더 커진<br/>16 대화면</h2>
@@ -209,18 +209,24 @@
 							</div>
 						</div>
 						<div id="animate3_1">
-							<img id="animate3_1_first" src="../assets/img/scene_3_01.png" alt=""/>
-							<img id="animate3_1_other" src="../assets/img/scene_3_02.png" alt=""/>
+							<img id="animate3_1_other" style="" src="../assets/img/scene_3_02.png" alt=""/>
+							<img id="animate3_1_first" style="top:0;" src="../assets/img/scene_3_01.png" alt=""/>
 						</div>
 						<div id="animate3_2">
 							<img src="../assets/img/scene_3_03.png" alt=""/>
 						</div>
 					</div>
 					<script>
+						TweenMax.set("#animate3_0", {top: "120px"});
+						var tween_title = new TimelineMax()
+							.to("#animate3_0", 5, {top:"-85px", ease: Cubic.easeInOut})
+							.to("#animate3_0 .button:first-child", 5, {opacity:0.6, delay:4, ease: Cubic.easeInOut})
+							.to("#animate3_0", 7, {top:"-=100", opacity:0.6, delay:3, ease: Cubic.easeInOut})
+
 						// tween_image
-						TweenMax.set("#animate3_1_other", {top: "-20px"});
+						TweenMax.set("#animate3_1_other", {bottom: "100%"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate3_1_other", 5, {top:190, ease: Cubic.easeInOut})
+							.to("#animate3_1_other", 5, {bottom:0, ease: Cubic.easeInOut})
 							.to("#animate3_1", 5, {left:"-100%", delay:5, ease: Cubic.easeInOut})
 						
 						TweenMax.set("#animate3_2", {left: "100%"});
@@ -250,6 +256,9 @@
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate3")
 										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption3)
+										.setTween(tween_title)
+										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
@@ -263,7 +272,7 @@
 					<div id="trigger4" class="spacer s0"></div>
 					<div id="animate4">
 						<div class="blank"></div>
-						<div id="animate4_1" class="title" style="top:60px">
+						<div id="animate4_1" class="title">
 							<h2>빈 틈 없이 밀착된 화면<br/>감동으로 채우다</h2>
 							<p class="small">4면 슬림 베젤 디자인</p>
 						</div>
@@ -333,7 +342,7 @@
 					<div id="animate5_scroll_to" style="position:absolute;top:30px;left:0"></div>
 					<div id="animate5">
 						<div class="blank"></div>
-						<div id="animate5_1" class="title" style="top:60px">
+						<div id="animate5_1" class="title">
 							<h2>가볍고 빠르게<br/>기네스가 인정한 휴대성</h2>
 							<p class="small">최경량 1,190g 무게</p>
 						</div>
@@ -398,10 +407,10 @@
 					<div id="trigger6" class="spacer s0"></div>
 					<div id="animate6">
 						<div class="blank"></div>
-						<div id="animate6_1" class="title" style="top:60px">
+						<div id="animate6_1" class="title">
 							<h2>사이즈는 줄이고<br />화면은 크게<br />반전매력, 역시 gram</h2>
 						</div>
-						<div id="animate6_2" class="divider" style="bottom:0;">
+						<div id="animate6_2" class="divider">
 							<div class="container">
 								<img src="../assets/img/scene_6_01.png" alt="">
 								<img src="../assets/img/scene_6_02.png" alt="">
@@ -453,11 +462,11 @@
 					<div id="animate7_scroll_to" style="position:absolute;top:30px;left:0"></div>
 					<div id="animate7">
 						<div class="blank"></div>
-						<div id="animate7_1" class="title" style="top:60px">
+						<div id="animate7_1" class="title">
 							<h2>2배 더 선명하게<br />깨지지 않는 아름다움</h2>
 							<p class="small">Full HD(1920x1080) 보다 2배 정밀한<br>초고해상도 WQXGA(2560x1600)</p>
 						</div>
-						<div id="animate7_2" class="divider" style="bottom:0;">
+						<div id="animate7_2" class="divider">
 							<div class="image last">
 								<img src="../assets/img/scene_7_02.png" alt="">
 							</div>
@@ -516,7 +525,7 @@
 					<div id="trigger8" class="spacer s0"></div>
 					<div id="animate8">
 						<div class="blank"></div>
-						<div id="animate8_1" class="title" style="top:60px">
+						<div id="animate8_1" class="title">
 							<h2>보이는 그대로<br />현실이 되다</h2>
 							<p class="small">DCI-P3 최대 99% 색재현율로 더 사실적인 그래픽</p>
 							<a href="#none" class="button popupBtn">DCI-P3 알아보기</a>
@@ -575,10 +584,10 @@
 					<div id="trigger9" class="spacer s0"></div>
 					<div id="animate9">
 						<div class="blank"></div>
-						<div id="animate9_1" class="title" style="top:60px">
+						<div id="animate9_1" class="title">
 							<h2>열어도 닫아도<br />gram 다운 디자인</h2>
 						</div>
-						<div id="animate9_2" class="slide" style="bottom:0">
+						<div id="animate9_2" class="slide">
 							<!-- Swiper -->
 							<div class="swiper-container">
 								<ul class="image swiper-wrapper">
@@ -1019,7 +1028,7 @@
 					<div id="trigger15C" class="spacer s0"></div>
 					<div id="animate15C">
 						<div class="blank"></div>
-						<div id="animate15_3" class="desc grey" style="bottom:0;">
+						<div id="animate15_3" class="desc grey">
 							<p>* 그래픽 성능, SSD 속도는 이론상 수치 또는 제조사에서 측정한 값이며 실제 측정값과 다를 수 있음</p>
 							<p>* 이해를 돕기 위해 연출된 이미지입니다</p>
 						</div>
@@ -1047,7 +1056,7 @@
 					<div id="trigger16" class="spacer s0"></div>
 					<div id="animate16">
 						<div class="blank"></div>
-						<div id="animate16_1" class="title white" style="top:60px">
+						<div id="animate16_1" class="title white">
 							<h2>다양한 입출력 단자<br />강력한 썬더볼트 4</h2>
 							<p class="small">충전, 데이터 전송, 다양한 주변장치를 더 빠르게<br />연결하는 썬더볼트 4 를 장착한 슬림하지만<br />갖출 건 다 갖춘 다양한 입출력 단자 </p>
 						</div>
@@ -1055,7 +1064,7 @@
 							<span class="image first" style="left:0"><img src="../assets/img/scene_16_01.png" alt=""></span>
 							<span class="image last" style="left:0"><img src="../assets/img/scene_16_02.png" alt=""></span>
 						</div>
-						<div id="animate16_3" class="desc grey" style="bottom:0;">
+						<div id="animate16_3" class="desc grey">
 							<p>* USB 3.1 = USB 3.2 Gen 2x1 전송속도 10 Gbps</p>
 							<p>* USB 4.0 = USB 4 Gen 3x2 전송속도 40 Gbps</p>
 							<p>* 썬더볼트4 제조사에서 측정한 값이며 실제 측정값과 다를 수 있음</p>
