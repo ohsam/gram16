@@ -515,7 +515,7 @@
 						<div id="animate8_1" class="title" style="top:60px">
 							<h2>보이는 그대로<br />현실이 되다</h2>
 							<p class="small">DCI-P3 최대 99% 색재현율로 더 사실적인 그래픽</p>
-							<a href="" class="button">DCI-P3 알아보기</a>
+							<a href="#none" class="button popupBtn">DCI-P3 알아보기</a>
 						</div>
 						<div id="animate8_2" class="video" style="background-color:#000;">
 							<video id="animate8_2_video" src="../assets/img/scene_8_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
@@ -1201,6 +1201,35 @@
 				<div class="spacer s_viewport"></div>
 			</div>
 		</div>
+	</div>
+	<div class="popup">
+		<div class="inner">
+			<a href="#none" class="close"><img src="../assets/img/popup_close.png" alt=""></a>
+			<div class="image">
+				<img src="../assets/img/popup_01.png" alt=""/>
+			</div>
+			<div class="content">
+				<strong>DCI-P3 란</strong>
+				<p>미국 영상 업계가 만든 디지털 영상 표준 색영역으로 숫자가 높을 수록 더 많은 색상을 정확하게 표현합니다. 색영역은 우리가 보는 색상의 범위를 말하며, 이 범위를 색상, 명도, 채도 기준으로 3차원의 입체적인 그래프로 표현한 것입니다. 이 영역이 넓고, 숫자가 높을 수록 더 많은 색상을 정확하게 표현합니다.</p>
+				<span>LG gram 16 : Typical 99 %, Min 95 % 표현</span>
+			</div>
+		</div>
+		<div class="dim"></div>
+		<script>
+			$(".popupBtn").on("click", function(){
+				$(".popup").addClass("open");
+				$("html").addClass("lock");
+			})
+
+			$(".popup .dim").on("click", function(){
+				$(".popup").removeClass("open");
+				$("html").removeClass("lock");
+			})
+			$(".popup .close").on("click", function(){
+				$(".popup").removeClass("open");
+				$("html").removeClass("lock");
+			})
+		</script>
 	</div>
 </body>
 </html>
