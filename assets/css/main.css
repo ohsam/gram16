@@ -22,6 +22,16 @@
 
 i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url("../img/ico_circArrow_down.png") center center no-repeat;background-size:contain;}
 
+/* Swiper */
+.swiper-page-wrap {}
+.swiper-pagination {}
+.swiper-pagination-bullet {display:inline-block;width:21px;height:21px;border:2px solid #fff;border-radius:50%;}
+.swiper-pagination-bullet-active {border-color:#ae1a4a !important;}
+.swiper-pagination-bullet:nth-child(1) {background-color:#fff;border-color:#ddd;}
+.swiper-pagination-bullet:nth-child(2) {background-color:#2c2c2c;}
+.swiper-pagination-bullet:nth-child(3) {background-color:#ababab;}
+
+
 #animate1 {height:530px;background:#31302e;}
 #animate1_1 {z-index:2;}
 #animate1_2 {position:absolute;width:100%;top:175px;z-index:1;}
@@ -34,12 +44,12 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate1_3 {position:relative;height:530px;overflow: hidden;z-index:0;}
 #animate1_3 img {position:absolute;bottom:0;right:0;width:360px;height:530px;}
 
-#animate2 {height:650px;overflow:hidden;background:#fff;}
+#animate2 {height:640px;overflow:hidden;background:#fff;}
 #animate2_1 {}
 #animate2_2 {position:absolute;left:50%;/*top:-45px;*/}
 #animate2_2 > img {position:absolute;left:-700px;top:0;}
 #animate2_2_info {position:absolute;}
-#animate2_3 {position:absolute;left:25px;/*top:590px;*/}
+#animate2_3 {position:absolute;left:25px;/*top:590px;*/width:calc(100% - 50px);}
 
 #animate3 {height: 450px;background:#fff;}
 #animate3_1 {position:absolute;left:25px;top:50px;width:calc(100% - 50px);min-height:420px;overflow-y:hidden;}
@@ -85,7 +95,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate8 .video video {position:absolute;top:0;left:0;width:100%;height:100%;}
 
 #animate9 {}
-#animate9 .blank {padding-top:174px;padding-bottom:calc(134.8% + 40px);}
+#animate9 .blank {padding-top:174px;padding-bottom:calc(134.8% + 90px);}
 #animate9 .slide {position:absolute;left:0;font-size:0;}
 #animate9 .slide .image {position:relative;white-space:nowrap;}
 #animate9 .slide .image li {position:relative;display:inline-block;}
@@ -109,11 +119,11 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 
 #animate11 {}
 #animate11 .blank {padding-top:212px;padding-bottom:calc(116.6% + 59.6%);}
-#animate11 .slide {position:absolute;margin-bottom:59.6%;left:0;font-size:0;}
+#animate11 .slide {position:absolute;/*margin-bottom:59.6%;*/left:0;font-size:0;}
 #animate11 .slide .image {position:relative;white-space:nowrap;}
 #animate11 .slide .image li {position:relative;display:inline-block;}
 #animate11 .slide .image img {width:100vw;}
-#animate11 .desc {position:absolute;left:0;}
+#animate11 .desc {position:absolute;left:0;bottom:0;}
 #animate11 .desc img {display:block;width:100vw;}
 
 #animate12 {}
@@ -132,6 +142,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate14 .title .small {color:#999;}
 #animate14 .video {position:absolute;left:0;width:100%;padding-bottom:91.2%;}
 #animate14 .video video {position:absolute;top:0;left:0;width:100%;height:100%;}
+#animate14 .video img {width:100%;}
 
 #animate15 {background-color:#000;}
 #animate15 .blank {height:50px;padding-top:63.2%;padding-bottom:662px;box-sizing:content-box;}
@@ -162,3 +173,16 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate16 .port .image.last {position:absolute;top:0;}
 #animate16 .desc {position:absolute;margin-bottom:75px;left:0;width:100%;padding:0 20px;font-size:12px;}
 #animate16 .desc p + p {margin-top:3px;padding-left:8px;text-indent:-8px;}
+
+#animate17 {}
+#animate17 .blank {padding-top:214px;padding-bottom:calc(100% + 30px);}
+#animate17 .video {position:absolute;left:0;width:100%;padding-bottom:100%;}
+#animate17 .video video {position:absolute;top:0;left:0;width:100%;height:100%;}
+#animate17 .desc {position:absolute;left:25px;bottom:36px;width:calc(100% - 50px);}
+
+#animate18 {}
+#animate18 .blank {padding-top:212px;padding-bottom:calc(86.2% + 120px);}
+#animate18 .image {position:absolute;margin-bottom:50px;left:25px;width:calc(100% - 50px);border-radius:15px;overflow:hidden;}
+#animate18 .image img {display:block;width:100%;}
+#animate18 .desc {position:absolute;left:25px;bottom:86px;width:calc(100% - 50px);}
+

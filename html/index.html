@@ -17,7 +17,8 @@
 	<script type="text/javascript" src="../assets/js/lib/greensock/TweenMax.min.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/jquery.min.js"></script>
 	<script type="text/javascript" src="../assets/js/lib/highlight.pack.js"></script>
-    <script type="text/javascript" src="../assets/js/lib/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper-bundle.js"></script>
     
     <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="../assets/js/lib/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
@@ -236,19 +237,19 @@
 							<h2>빈 틈 없이 밀착된 화면<br/>감동으로 채우다</h2>
 							<p class="small">4면 슬림 베젤 디자인</p>
 						</div>
-						<div id="animate4_2" class="video" style="bottom:0;background-color:#c7e1ff;">
+						<div id="animate4_2" class="video" style="bottom:0;background-color:#000;">
 							<video id="animate4_2_video" src="../assets/img/scene_4_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate4_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate4_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate4_1", 3, {top: 60, opacity: 1})
 							.to("#animate4_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate4_2", {opacity: 0.6, top:"260"});
+						TweenMax.set("#animate4_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate4_2", 3, {opacity:1, top:210})
 							.to("#animate4_2", 1, {opacity: 0.6, delay: 6})
@@ -262,8 +263,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger4",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -304,7 +305,7 @@
 							<h2>가볍고 빠르게<br/>기네스가 인정한 휴대성</h2>
 							<p class="small">최경량 1,190g 무게</p>
 						</div>
-						<div id="animate5_2" class="video" style="bottom:0;background-color:#c7e1ff;">
+						<div id="animate5_2" class="video" style="bottom:0;background-color:#000;">
 							<video id="animate5_2_video" src="../assets/img/scene_5_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 						<div id="animate5_3" class="logo" style="bottom:0;">
@@ -317,13 +318,13 @@
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate5_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate5_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate5_1", 3, {top: 60, opacity: 1})
 							.to("#animate5_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate5_2", {opacity: 0.6, top:"260"});
+						TweenMax.set("#animate5_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate5_2", 3, {opacity:1, top:210})
 							.to("#animate5_2", 1, {opacity: 0.6, delay: 6})
@@ -337,8 +338,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger5",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -382,13 +383,13 @@
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate6_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate6_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate6_1", 3, {top: 60, opacity: 1})
 							.to("#animate6_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate6_2", {opacity: 0.6, top:"264"});
+						TweenMax.set("#animate6_2", {opacity: 0, top:"264"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate6_2", 3, {opacity:1, top:214})
 							.to("#animate6_2", 1, {opacity: 0.6, delay: 6})
@@ -402,8 +403,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger6",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -437,13 +438,13 @@
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate7_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate7_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate7_1", 3, {top: 60, opacity: 1})
 							.to("#animate7_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate7_2", {opacity: 0.6, top:"286"});
+						TweenMax.set("#animate7_2", {opacity: 0, top:"286"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate7_2", 3, {opacity:1, top:236})
 							.to("#animate7_2", 1, {opacity: 0.6, delay: 6})
@@ -462,8 +463,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger7",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "75%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -487,19 +488,19 @@
 							<p class="small">DCI-P3 최대 99% 색재현율로 더 사실적인 그래픽</p>
 							<a href="" class="button">DCI-P3 알아보기</a>
 						</div>
-						<div id="animate8_2" class="video" style="bottom:0;background-color:#c7e1ff;">
+						<div id="animate8_2" class="video" style="bottom:0;background-color:#000;">
 							<video id="animate8_2_video" src="../assets/img/scene_8_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate8_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate8_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate8_1", 3, {top: 60, opacity: 1})
 							.to("#animate8_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate8_2", {opacity: 0.6, top:"314"});
+						TweenMax.set("#animate8_2", {opacity: 0, top:"314"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate8_2", 3, {opacity:1, top:264})
 							.to("#animate8_2", 1, {opacity: 0.6, delay: 6})
@@ -513,8 +514,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger8",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -545,12 +546,12 @@
 							<h2>열어도 닫아도<br />gram 다운 디자인</h2>
 						</div>
 						<div id="animate9_2" class="slide" style="bottom:0">
-							<ul class="image" style="left:0;">
+							<!-- <ul class="image" style="left:0;">
 								<li>
-									<!-- <div class="txt">
+									<div class="txt">
 										<strong>옵시디안 블랙</strong>
 										<p>순수하게 빛나는 짙은 검정의<br />흑요석을 연상시키는 옵시디안 블랙</p>
-									</div> -->
+									</div>
 									<img src="../assets/img/scene_9_01.png" alt="">
 								</li>
 								<li>
@@ -572,18 +573,61 @@
 								<li><a href="" class="color1 active"></a></li>
 								<li><a href="" class="color2"></a></li>
 								<li><a href="" class="color3"></a></li>
-							</ul>
+							</ul> -->
+
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<ul class="image swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="txt">
+											<strong>스노우 화이트</strong>
+											<p>눈부신 순백의 아름다움<br />하얀 눈을 그대로 담아낸 스노우 화이트</p>
+										</div>
+										<img src="../assets/img/scene_9_01.png" alt="">
+									</li>
+									<li class="swiper-slide">
+										<div class="txt white">
+											<strong>옵시디안 블랙</strong>
+											<p>순수하게 빛나는 짙은 검정의<br />흑요석을 연상시키는 옵시디안 블랙</p>
+										</div>
+										<img src="../assets/img/scene_9_02.png" alt="">
+									</li>
+									<li class="swiper-slide">
+										<div class="txt">
+											<strong>쿼츠 실버</strong>
+											<p>수정의 영롱함 <br />그 본질을 그대로 담아낸 쿼츠 실버</p>
+										</div>
+										<img src="../assets/img/scene_9_03.png" alt="">
+									</li>
+								</ul>
+								<!-- Add Pagination -->
+								<div class="swiper-page-wrap"><div class="swiper-pagination"></div></div>
+							</div>
 						</div>
 					</div>
 					<script>
+						var swiper = new Swiper('#animate9_2 .swiper-container', {
+							spaceBetween: 30,
+							effect: 'fade',
+							loop: true,
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							},
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+						});
+
 						// tween_title
-						TweenMax.set("#animate9_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate9_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
                             .to("#animate9_1", 3, {top: 60, opacity: 1})
 							.to("#animate9_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate9_2", {opacity: 0.6, top:"260"});
+						TweenMax.set("#animate9_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate9_2", 3, {opacity:1, top:210})
 							.to("#animate9_2", 1, {opacity: 0.6, delay: 6})
@@ -597,8 +641,8 @@
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger9",
-							triggerHook: 0.4,
-							duration: "60%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
@@ -618,52 +662,41 @@
 							<h2>최고의 순간까지<br />함께하는 배터리</h2>
 							<p class="small">800 Wh 대용량 배터리 최대 22시간 사용</p>
 						</div>
-						<div id="animate10_2" class="video" style="background-color:#c7e1ff;">
+						<div id="animate10_2" class="video" style="background-color:#000;">
 							<video id="animate10_2_video" src="../assets/img/scene_10_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate10_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate10_1", {opacity:0, top: "140"});
 						var tween_title = new TimelineMax()
-							.to("#animate10_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate10_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+							.to("#animate10_1", 3, {top: 60, opacity: 1})
+							.to("#animate10_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate10_2", {opacity: 0.6, top:"264"});
+						TweenMax.set("#animate10_2", {opacity: 0, top:"264"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate10_2", 2.5, {opacity:1, top:214, ease: Cubic.easeInOut})
-							.to("#animate10_2", 1, {opacity: 0.6, delay: 6.5})
+							.to("#animate10_2", 3, {opacity:1, top:214})
+							.to("#animate10_2", 1, {opacity: 0.6, delay: 6})
 
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger10",
-							triggerHook: 0,
-							duration: "50%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger10",
-							triggerHook: 0.7,
-							duration: "120%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
-						var sceneOption3 = {
-							triggerElement: "#trigger10",
-							triggerHook: 0.4,
-							duration: "110%",
-							reverse: true
-						}
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate10")
-										//.addIndicators({name: "10 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
-										//.addIndicators({name: "10 video (duration: 100%)"})
 										.addTo(controller)
 										.on("update", function (e) {
 											//console.log(e.target.controller().info("scrollDirection"));
@@ -708,50 +741,51 @@
 						// tween_title
 						TweenMax.set("#animate11_1", {opacity:0, top: "100"});
 						var tween_title = new TimelineMax()
-							.to("#animate11_1", 1.5, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate11_1", 0.5, {opacity: 0.8, top:-10, delay: 3, ease: Cubic.easeInOut})
-							.to("#animate11_2", 1.2, {opacity: 0.6, top:142});
+							// .to("#animate11_1", 1.5, {top: 60, opacity: 1})
+							// .to("#animate11_1", 0.5, {opacity: 0.8, top:-10, delay: 3})
+							// .to("#animate11_2", 1.2, {opacity: 0.6, top:142});
+							.to("#animate11_1", 3, {top: 60, opacity: 1})
+							.to("#animate11_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
 						TweenMax.set("#animate11_2", {opacity: 0.6, top:"262"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate11_2", 1.3, {opacity:1, top:212, ease: Cubic.easeInOut})
-							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-100vw", delay: 0.8, ease: Cubic.easeIn})
-							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-200vw", delay: 0.8, ease: Cubic.easeIn})
-							.to("#animate11_2", 1, {opacity: 1, top:142, delay: 0.8})
-							.to("#animate11_2", 2, {opacity: 0.6, top:142});
+							.to("#animate11_2", 1.3, {opacity:1, top:212})
+							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-100vw", delay: 0.8})
+							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-200vw", delay: 0.8})
+							.to("#animate11_2", 1, {opacity: 0.6, delay: 0.6});
 
 						// tween_desc
-						TweenMax.set("#animate11_3", {opacity:0, bottom: "-110px"});
-						var tween_desc = new TimelineMax()
-							.to("#animate11_3", 0.8, {bottom: "70px", opacity: 1, delay:1.3, ease: Cubic.easeInOut})
-							.to("#animate11_3", 0.2, {bottom: "70px", opacity: 0.6});
+						// TweenMax.set("#animate11_3", {opacity:0, bottom: "-110px"});
+						// var tween_desc = new TimelineMax()
+						// 	.to("#animate11_3", 0.8, {bottom: "0px", opacity: 1, delay:1.3})
+						// 	.to("#animate11_3", 0.2, {bottom: "-50px", opacity: 0.6});
 
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger11",
 							triggerHook: 0,
-							duration: "75%",
+							duration: "65%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger11",
-							triggerHook: 0.7,
-							duration: "180%",
+							triggerHook: 0.6,
+							duration: "140%",
 							reverse: true
 						}
 						var sceneOption3 = {
 							triggerElement: "#trigger11",
-							triggerHook: 0.4,
-							duration: "165%",
+							triggerHook: 0.5,
+							duration: "140%",
 							reverse: true
 						}
-						var sceneOption4 = {
-							triggerElement: "#trigger11",
-							triggerHook: 0.4,
-							duration: "165%",
-							reverse: true
-						}
+						// var sceneOption4 = {
+						// 	triggerElement: "#trigger11",
+						// 	triggerHook: 0.2,
+						// 	duration: "40%",
+						// 	reverse: true
+						// }
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate11")
 										//.addIndicators({name: "11 (duration: 100%)"})
@@ -762,9 +796,9 @@
 						new ScrollMagic.Scene(sceneOption3)
 										.setTween(tween_image1)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
-										.setTween(tween_desc)
-										.addTo(controller);
+						// new ScrollMagic.Scene(sceneOption3)
+						// 				.setTween(tween_desc)
+						// 				.addTo(controller);
 					</script>
 				</section>
 					
@@ -782,44 +816,34 @@
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate12_1", {opacity:0, top: "100"});
-						var tween_title = new TimelineMax()
-							.to("#animate12_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate12_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+						TweenMax.set("#animate12_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate12_1", 3, {top: 60, opacity: 1})
+							.to("#animate12_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate12_2", {opacity: 0.6, top:"262"});
+						TweenMax.set("#animate12_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate12_2", 2.5, {opacity:1, top:212, ease: Cubic.easeInOut})
-							.to("#animate12_2", 1, {opacity: 0.6, delay: 6.5})
-
+							.to("#animate12_2", 3, {opacity:1, top:210})
+							.to("#animate12_2", 1, {opacity: 0.6, delay: 6})
+						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger12",
-							triggerHook: 0,
-							duration: "50%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger12",
-							triggerHook: 0.7,
-							duration: "120%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
-						var sceneOption3 = {
-							triggerElement: "#trigger12",
-							triggerHook: 0.4,
-							duration: "110%",
-							reverse: true
-						}
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate12")
-										//.addIndicators({name: "12 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
 					</script>
@@ -839,44 +863,34 @@
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate13_1", {opacity:0, top: "100"});
-						var tween_title = new TimelineMax()
-							.to("#animate13_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate13_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+						TweenMax.set("#animate13_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate13_1", 3, {top: 60, opacity: 1})
+							.to("#animate13_1", 3, {opacity: 0.6, delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate13_2", {opacity: 0.6, top:"262"});
+						TweenMax.set("#animate13_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate13_2", 2.5, {opacity:1, top:212, ease: Cubic.easeInOut})
-							.to("#animate13_2", 1, {opacity: 0.6, delay: 6.5})
-
+							.to("#animate13_2", 3, {opacity:1, top:210})
+							.to("#animate13_2", 1, {opacity: 0.6, delay: 6})
+						
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger13",
-							triggerHook: 0,
-							duration: "50%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger13",
-							triggerHook: 0.7,
-							duration: "120%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
-						var sceneOption3 = {
-							triggerElement: "#trigger13",
-							triggerHook: 0.4,
-							duration: "110%",
-							reverse: true
-						}
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate13")
-										//.addIndicators({name: "13 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
 					</script>
@@ -890,64 +904,43 @@
 							<h2>우리가 가는 길이<br />새로움의 표준</h2>
 							<p class="small">인텔® Evo™ 플랫폼 인증</p>
 						</div>
-						<div id="animate14_2" class="video" style="background-color:#c7e1ff;">
-							<video id="animate14_2_video" src="../assets/img/scene_14_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
+						<div id="animate14_2" class="video" style="background-color:#000;">
+							<img src="../assets/img/CPU.gif" alt="" />
 						</div>
 					</div>
 					<script>
 						// tween_title
-						TweenMax.set("#animate14_1", {opacity:0, top: "100"});
+						TweenMax.set("#animate14_1", {opacity:0, top: "140"});
 						var tween_title = new TimelineMax()
-							.to("#animate14_1", 3, {top: 60, opacity: 1, ease: Cubic.easeInOut})
-							.to("#animate14_1", 1, {opacity: 0.8, top:-10, delay: 6, ease: Cubic.easeInOut})
+							.to("#animate14_1", 3, {top: 60, opacity: 1})
+							.to("#animate14_1", 3, {delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate14_2", {opacity: 0.6, top:"233"});
+						TweenMax.set("#animate14_2", {opacity: 0, top:"233"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate14_2", 2.5, {opacity:1, top:183, ease: Cubic.easeInOut})
-							.to("#animate14_2", 1, {opacity: 0.6, delay: 6.5})
+							.to("#animate14_2", 3, {opacity:1, top:183})
+							.to("#animate14_2", 1, {delay: 6})
 
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger14",
-							triggerHook: 0,
-							duration: "50%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger14",
-							triggerHook: 0.7,
-							duration: "120%",
-							reverse: true
-						}
-						var sceneOption3 = {
-							triggerElement: "#trigger14",
-							triggerHook: 0.4,
-							duration: "110%",
+							triggerHook: 0.5,
+							duration: "65%",
 							reverse: true
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate14")
-										//.addIndicators({name: "14 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										//.addIndicators({name: "14 video (duration: 100%)"})
-										.addTo(controller)
-										.on("update", function (e) {
-											//console.log(e.target.controller().info("scrollDirection"));
-										})
-										.on("enter leave", function (e) {
-											if(e.type == "enter"){
-												console.log('enter');
-												$("#animate14_2_video").get(0).play();
-											}else{
-												$("#animate14_2_video").get(0).pause();
-											}
-										});
+										.addTo(controller);
 					</script>
 				</section>
 					
@@ -985,10 +978,10 @@
 						// tween_image
 						TweenMax.set("#animate15_1", {top: "80px", opacity: 0});
 						var tween_image1 = new TimelineMax()
-							.to("#animate15_1", 1.5, {top:0, opacity: 1, delay: 0.8, ease: Cubic.easeOut})
+							.to("#animate15_1", 1, {top:0, opacity: 1, ease: Cubic.easeOut})
 
 						// tween_anchor
-						var tween_anchor = TweenMax.staggerFromTo("#animate15_2 li", 2.2, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
+						var tween_anchor = TweenMax.staggerFromTo("#animate15_2 li", 1, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
 
 						// tween_desc
 						TweenMax.set("#animate15_3", {bottom: "-30px", opacity: 0});
@@ -1071,6 +1064,133 @@
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_desc)
+										.addTo(controller);
+					</script>
+				</section>
+
+				<section id="scene17" class="motionContent">
+					<div id="trigger17" class="spacer s0"></div>
+					<div id="animate17">
+						<div class="blank"></div>
+						<div id="animate17_1" class="title">
+							<h2>깊이있게 웅장하게</h2>
+							<p class="small">DTS:Ultra 적용으로 입체적인 사운드</p>
+						</div>
+						<div id="animate17_2" class="video" style="background-color:#000;">
+							<video id="animate17_2_video" src="../assets/img/scene_10_video_dummy.mp4" muted="muted" width="100%" height="100%" loop></video>
+						</div>
+						<div id="animate17_3" class="desc grey">
+							<p>*스마트 앰프 적용 시 최대 5Wx2</p>
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate17_1", {opacity:0, top: "140"});
+						var tween_title = new TimelineMax()
+							.to("#animate17_1", 3, {top: 60, opacity: 1})
+							.to("#animate17_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate17_2", {opacity: 0, top:"222"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate17_2", 3, {opacity:1, top:172})
+							.to("#animate17_2", 1, {opacity: 0.6, delay: 6})
+
+						TweenMax.set("#animate17_3", {opacity: 0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate17_3", 3, {opacity:1})
+							.to("#animate17_3", 1, {opacity: 0.6, delay: 6})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger17",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger17",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate17_2_video").get(0).play();
+											}else{
+												$("#animate17_2_video").get(0).pause();
+											}
+										});
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image2)
+										.addTo(controller)
+					</script>
+				</section>
+
+				<section id="scene18" class="motionContent">
+					<div id="trigger18" class="spacer s0"></div>
+					<div id="animate18">
+						<div class="blank"></div>
+						<div id="animate18_1" class="title">
+							<h2>향균 효과<br/>99.99% 키스킨</h2>
+						</div>
+						<div id="animate18_2" class="image">
+							<img src="../assets/img/scene_13_01.png" alt="">
+						</div>
+						<div id="animate18_3" class="desc grey">
+							<p>*대장균, 황색포도상구균, 녹농균 향균활성치 4 이상</p>
+							<p>*24시간 후 균수(CFU/mL) 향균활성치를 한국분석시험연구원을 통해 측정하여 얻은 결과값입니다.</p>
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate18_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate18_1", 3, {top: 60, opacity: 1})
+							.to("#animate18_1", 3, {opacity: 0.6, delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate18_2", {opacity: 0, top:"220"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate18_2", 3, {opacity:1, top:170})
+							.to("#animate18_2", 1, {opacity: 0.6, delay: 6})
+
+						TweenMax.set("#animate18_3", {opacity: 0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate18_3", 3, {opacity:1})
+							.to("#animate18_3", 1, {opacity: 0.6, delay: 6})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger18",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger18",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image2)
 										.addTo(controller);
 					</script>
 				</section>
