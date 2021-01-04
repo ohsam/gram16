@@ -950,13 +950,37 @@
 					</script>
 				</section>
 					
-				<section id="scene15" class="motionContent">
-					<div id="trigger15" class="spacer s0"></div>
-					<div id="animate15">
+				<section id="scene15A" class="motionContent">
+					<div id="trigger15A" class="spacer s0"></div>
+					<div id="animate15A">
 						<div class="blank"></div>
 						<div id="animate15_1" class="icons">
 							<img src="../assets/img/scene_15_01.png" alt="">
 						</div>
+					</div>
+					<script>
+						// tween_image
+						TweenMax.set("#animate15_1", {top: "80px", opacity: 0});
+						var tween_image1 = new TimelineMax()
+							.to("#animate15_1", 1, {top:0, opacity: 1, ease: Cubic.easeOut})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger15A",
+							triggerHook: 0.8,
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image1)
+										//.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
+										.addTo(controller);
+
+					</script>
+				</section>
+				<section id="scene15B" class="motionContent">
+					<div id="trigger15B" class="spacer s0"></div>
+					<div id="animate15B">
+						<div class="blank"></div>
 						<ul id="animate15_2" class="performance" style="bottom:0;">
 							<li class="type1">
 								<strong class="txt">11세대 인텔® 코어™ <br>프로세서</strong>
@@ -975,39 +999,44 @@
 								<div class="image"><img src="../assets/img/scene_15_05.png" alt=""></div>
 							</li>
 						</ul>
+					</div>
+					<script>
+						// tween_anchor
+						var tween_anchor = TweenMax.staggerFromTo("#animate15_2 li", 1, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger15B",
+							triggerHook: 0.8,
+							reverse: true
+						}
+						var scene = new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_anchor)
+										.addTo(controller);
+					</script>
+				</section>
+				<section id="scene15C" class="motionContent">
+					<div id="trigger15C" class="spacer s0"></div>
+					<div id="animate15C">
+						<div class="blank"></div>
 						<div id="animate15_3" class="desc grey" style="bottom:0;">
 							<p>* 그래픽 성능, SSD 속도는 이론상 수치 또는 제조사에서 측정한 값이며 실제 측정값과 다를 수 있음</p>
 							<p>* 이해를 돕기 위해 연출된 이미지입니다</p>
 						</div>
 					</div>
 					<script>
-						// tween_image
-						TweenMax.set("#animate15_1", {top: "80px", opacity: 0});
-						var tween_image1 = new TimelineMax()
-							.to("#animate15_1", 1, {top:0, opacity: 1, ease: Cubic.easeOut})
-
-						// tween_anchor
-						var tween_anchor = TweenMax.staggerFromTo("#animate15_2 li", 1, {top:"60px", opacity:0}, {top:"0", opacity:1, ease: Cubic.easeInOut, delay:0.2}, 0.2);
-
 						// tween_desc
 						TweenMax.set("#animate15_3", {bottom: "-30px", opacity: 0});
 						var tween_desc = new TimelineMax()
-							.to("#animate15_3", 1.5, {bottom: "0", opacity: 1, delay: 2.2, ease: Cubic.easeOut})
+							.to("#animate15_3", 1.5, {bottom: "0", opacity: 1, ease: Cubic.easeOut})
 
 						// build scene
 						var sceneOption = {
-							triggerElement: "#trigger15",
+							triggerElement: "#trigger15C",
 							triggerHook: 0.8,
 							reverse: true
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_image1)
-										//.addIndicators({name: "15 (duration: 0)"}) // add indicators (requires plugin)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_anchor)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_desc)
 										.addTo(controller);
 
