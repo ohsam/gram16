@@ -177,5 +177,5 @@ ol, ul, dl {
 
 section.motionContent {
 	position: relative;
-	/* border-top: 1px solid red; */
+	border-top: 1px solid red;
 }

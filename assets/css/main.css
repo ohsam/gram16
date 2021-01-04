@@ -56,7 +56,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate1_3 {position:relative;height:530px;overflow: hidden;z-index:0;}
 #animate1_3 img {position:absolute;bottom:0;right:0;width:360px;height:530px;}
 
-#scene3 {/*overflow:visible;*/background:red;}
+#scene3 {/*overflow:visible;*/}
 #animate2 {height:640px;overflow:hidden;background:#fff;}
 #animate2_1 {}
 #animate2_2 {position:absolute;left:50%;/*top:-45px;*/}
@@ -64,16 +64,17 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate2_2_info {position:absolute;}
 #animate2_3 {position:absolute;left:25px;/*top:590px;*/width:calc(100% - 50px);}
 
-#animate3 {height:550px;background:#fff;}
+/* #animate3 {height:550px;background:#fff;} */
+#animate3 {height:812px;background:#fff;}
 #animate3_0 {position:absolute;left:0;width:100%;padding:0 25px;}
 #animate3_0 .center {width:100%;text-align:center;}
 #animate3_0 .button {margin-top:30px;width:92px;text-align:center;}
 #animate3_0 .button + .button {margin-left:7px;opacity:0.6;transition:opacity 0.2s;}
 #animate3_0 .button[style*="opacity: 0.6"] + .button {opacity:1;}
-#animate3_1 {position:absolute;left:25px;top:120px;width:calc(100% - 50px);overflow-y:hidden;}
+#animate3_1 {position:absolute;left:25px;top:300px;width:calc(100% - 50px);overflow-y:hidden;}
 #animate3_1:before {content:"";display:block;padding-bottom:121%;}
 #animate3_1 img {position:absolute;left:0;width:100%;}
-#animate3_2 {position:absolute;left:25px;top:120px;width:calc(100% - 50px);min-height:420px;overflow-y:hidden;}
+#animate3_2 {position:absolute;left:25px;top:300px;width:calc(100% - 50px);min-height:420px;overflow-y:hidden;}
 #animate3_2 img {width:100%;}
 
 #animate4 {}

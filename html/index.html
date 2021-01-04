@@ -217,27 +217,32 @@
 						</div>
 					</div>
 					<script>
-						TweenMax.set("#animate3_0", {top: "120px"});
+						TweenMax.set("#animate3_0", {opacity:0, top: "140px"});
 						var tween_title = new TimelineMax()
-							.to("#animate3_0", 5, {top:"-85px", ease: Cubic.easeInOut})
-							.to("#animate3_0 .button:first-child", 5, {opacity:0.6, delay:4, ease: Cubic.easeInOut})
-							.to("#animate3_0", 7, {top:"-=100", opacity:0.6, delay:3, ease: Cubic.easeInOut})
+							// .to("#animate3_0", 5, {top:"-85px", ease: Cubic.easeInOut})
+							// .to("#animate3_0 .button:first-child", 5, {opacity:0.6, delay:4, ease: Cubic.easeInOut})
+							// .to("#animate3_0", 7, {top:"-=100", opacity:0.6, delay:3, ease: Cubic.easeInOut})
+							.to("#animate3_0", 3, {top: 60, opacity: 1})
+							.to("#animate3_0", 3, {/*opacity: 0.6,*/ delay: 4})
 
 						// tween_image
 						TweenMax.set("#animate3_1_other", {bottom: "100%"});
 						var tween_image1 = new TimelineMax()
 							.to("#animate3_1_other", 5, {bottom:0, ease: Cubic.easeInOut})
 							.to("#animate3_1", 5, {left:"-100%", delay:5, ease: Cubic.easeInOut})
+							.to("#animate3_0 .button:first-child", 0, {opacity:0.6})
+							.to("#animate3_0 .button:last-child", 0, {opacity:1})
 						
 						TweenMax.set("#animate3_2", {left: "100%"});
 						var tween_image2 = new TimelineMax()
 							.to("#animate3_2", 3, {left:25, delay:7, ease: Cubic.easeInOut})
-							.to("#animate3_2", 4, {top:"-=100", opacity:0.6, delay:1, ease: Cubic.easeInOut})
+							//.to("#animate3_2", 4, {top:"-=100", opacity:0.6, delay:1, ease: Cubic.easeInOut})
+							.to("#animate3_2", 4, {/*opacity:0.6,*/ delay:1})
 
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger3",
-							triggerHook: 0.2,
+							triggerHook: 0.0,
 							duration: "180%",
 							reverse: true
 						}
@@ -249,7 +254,7 @@
 						}
 						var sceneOption3 = {
 							triggerElement: "#trigger3",
-							triggerHook: 0.75,
+							triggerHook: 0.6,
 							duration: "270%",
 							reverse: true
 						}
