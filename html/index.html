@@ -352,7 +352,7 @@
 							<p class="small">최경량 1,190g 무게</p>
 						</div>
 						<div id="animate5_2" class="video" style="background-color:#000;">
-							<video id="animate5_2_video" src="../assets/img/scene_5_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+							<video id="animate5_2_video" src="../assets/mov/scene5_720_540.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 						<div id="animate5_3" class="logo" style="bottom:0;">
 							<img src="../assets/img/scene_5_01.png" alt="">
@@ -514,13 +514,19 @@
 							duration: "75%",
 							reverse: true
 						}
+						var sceneOption3 = {
+							triggerElement: "#trigger7",
+							triggerHook: 0.3,
+							duration: "55%",
+							reverse: true
+						}
 						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						new ScrollMagic.Scene(sceneOption3)
 										.setTween(tween_image2)
 										.addTo(controller);
 					</script>
@@ -535,8 +541,8 @@
 							<p class="small">DCI-P3 최대 99% 색재현율로 더 사실적인 그래픽</p>
 							<a href="#none" class="button popupBtn">DCI-P3 알아보기</a>
 						</div>
-						<div id="animate8_2" class="video" style="background-color:#000;">
-							<video id="animate8_2_video" src="../assets/img/scene_8_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+						<div id="animate8_2" class="video" style="background-color:#fff;">
+							<video id="animate8_2_video" src="../assets/mov/scene8_720_404.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
@@ -547,9 +553,9 @@
 							.to("#animate8_1", 3, {/*opacity: 0.6,*/ delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate8_2", {opacity: 0, top:"314"});
+						TweenMax.set("#animate8_2", {opacity: 0, top:"310"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate8_2", 3, {opacity:1, top:264})
+							.to("#animate8_2", 3, {opacity:1, top:260})
 							.to("#animate8_2", 1, {/*opacity: 0.6,*/ delay: 6})
 						
 						// build scene
@@ -645,9 +651,9 @@
 							.to("#animate9_1", 3, {/*opacity: 0.6,*/ delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate9_2", {opacity: 0, top:"260"});
+						TweenMax.set("#animate9_2", {opacity: 0, top:"224"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate9_2", 3, {opacity:1, top:210})
+							.to("#animate9_2", 3, {opacity:1, top:174})
 							.to("#animate9_2", 1, {/*opacity: 0.6,*/ delay: 6})
 						
 						// build scene
@@ -683,7 +689,7 @@
 							<p class="small">800 Wh 대용량 배터리 최대 22시간 사용</p>
 						</div>
 						<div id="animate10_2" class="video" style="background-color:#000;">
-							<video id="animate10_2_video" src="../assets/img/scene_10_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+							<video id="animate10_2_video" src="../assets/mov/scene10_720_720.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
@@ -740,18 +746,8 @@
 							<h2>언제 어디서든<br />강인한 gram</h2>
 							<p class="small">미 국방부 내구성 테스트를 통과한 극강의 gram16</p>
 						</div>
-						<div id="animate11_2" class="slide">
-							<ul class="image">
-								<li>
-									<img src="../assets/img/scene_11_01.png" alt="">
-								</li>
-								<li>
-									<img src="../assets/img/scene_11_02.png" alt="">
-								</li>
-								<li>
-									<img src="../assets/img/scene_11_03.png" alt="">
-								</li>
-							</ul>
+						<div id="animate11_2" class="video" style="background-color:initial;">
+							<video id="animate11_2_video" src="../assets/mov/scene11_720_800.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 						<div id="animate11_3" class="desc">
 							<img src="../assets/img/scene_11_04.png" alt="">
@@ -765,51 +761,41 @@
 							.to("#animate11_1", 3, {/*opacity: 0.6,*/ delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate11_2", {opacity: 0, top:"262"});
+						TweenMax.set("#animate11_2", {opacity: 0, top:"264"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate11_2", 1, {opacity:1, top:212, delay:0.3})
-							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-100vw", delay: 0.8})
-							.to("#animate11_2", 0.9, {opacity:1, top:212, left: "-200vw", delay: 0.8})
-							.to("#animate11_2", 1, {/*opacity: 0.6,*/ delay: 0.6});
+							.to("#animate11_2", 3, {opacity:1, top:214})
+							.to("#animate11_2", 1, {/*opacity: 0.6,*/ delay: 6})
 
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger11",
-							triggerHook: 0,
-							duration: "65%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger11",
-							triggerHook: 0.6,
-							duration: "140%",
-							reverse: true
-						}
-						var sceneOption3 = {
-							triggerElement: "#trigger11",
 							triggerHook: 0.5,
-							duration: "140%",
+							duration: "70%",// common: 65%
 							reverse: true
 						}
-						// var sceneOption4 = {
-						// 	triggerElement: "#trigger11",
-						// 	triggerHook: 0.2,
-						// 	duration: "40%",
-						// 	reverse: true
-						// }
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate11")
-										//.addIndicators({name: "11 (duration: 100%)"})
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
-										.addTo(controller);
-						// new ScrollMagic.Scene(sceneOption3)
-						// 				.setTween(tween_desc)
-						// 				.addTo(controller);
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate11_2_video").get(0).play();
+											}else{
+												$("#animate11_2_video").get(0).pause();
+											}
+										});
 					</script>
 				</section>
 					
@@ -822,7 +808,7 @@
 							<p class="small">키보드</p>
 						</div>
 						<div id="animate12_2" class="image">
-							<img src="../assets/img/scene_12_01.png" alt="">
+							<img src="../assets/img/scene_12_01.gif" alt="">
 						</div>
 					</div>
 					<script>
@@ -869,7 +855,7 @@
 							<p class="small">확 넓어진 터치패드</p>
 						</div>
 						<div id="animate13_2" class="image">
-							<img src="../assets/img/scene_13_01.png" alt="">
+							<img src="../assets/img/scene_13_01.gif" alt="">
 						</div>
 					</div>
 					<script>
