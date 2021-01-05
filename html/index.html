@@ -132,6 +132,214 @@
 
 					</script>
 				</section>
+
+				<section id="scene5" class="motionContent">
+					<div id="trigger5" class="spacer s0"></div>
+					<div id="animate5_scroll_from" style="position:absolute;top:-480px;left:0"></div>
+					<div id="animate5_scroll_to" style="position:absolute;top:30px;left:0"></div>
+					<div id="animate5">
+						<div class="blank"></div>
+						<div id="animate5_1" class="title">
+							<h2>가볍고 빠르게<br/>기네스가 인정한 휴대성</h2>
+							<p class="small">최경량 1,190g 무게</p>
+						</div>
+						<div id="animate5_2" class="video" style="background-color:#000;">
+							<video id="animate5_2_video" src="../assets/mov/scene5_720_540.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+						</div>
+						<div id="animate5_3" class="logo" style="bottom:0;">
+							<img src="../assets/img/scene_5_01.png" alt="">
+						</div>
+						<div id="animate5_4" class="desc grey" style="bottom:0;opacity: 0.6;">
+							<p>세계 최경량 16 노트북 인증 획득</p>
+							<p>(2020년 12월, 기네스 월드 레코드®)</p>
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate5_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate5_1", 3, {top: 60, opacity: 1})
+							.to("#animate5_1", 3, {/*opacity: 0.6,*/ delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate5_2", {opacity: 0, top:"260"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate5_2", 3, {opacity:1, top:210})
+							.to("#animate5_2", 1, {/*opacity: 0.6,*/ delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger5",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger5",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate5_2_video").get(0).play();
+											}else{
+												$("#animate5_2_video").get(0).pause();
+											}
+										});
+					</script>
+				</section>
+
+				<section id="scene6" class="motionContent">
+					<div id="trigger6" class="spacer s0"></div>
+					<div id="animate6">
+						<div class="blank"></div>
+						<div id="animate6_1" class="title">
+							<h2>사이즈는 줄이고<br />화면은 크게<br />반전매력, 역시 gram</h2>
+						</div>
+						<div id="animate6_2" class="divider">
+							<div class="container">
+								<img src="../assets/img/scene_6_01.png" alt="">
+								<img src="../assets/img/scene_6_02.png" alt="">
+							</div>
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate6_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate6_1", 3, {top: 60, opacity: 1})
+							.to("#animate6_1", 3, {/*opacity: 0.6,*/ delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate6_2", {opacity: 0, top:"264"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate6_2", 3, {opacity:1, top:214})
+							.to("#animate6_2", 1, {/*opacity: 0.6,*/ delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger6",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger6",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+
+						$(window).on("load", function(){
+							$('.container').twentytwenty({ default_offset_pct : 0.4 });
+						});
+					</script>
+				</section>
+
+				<section id="scene9" class="motionContent">
+					<div id="trigger9" class="spacer s0"></div>
+					<div id="animate9">
+						<div class="blank"></div>
+						<div id="animate9_1" class="title">
+							<h2>열어도 닫아도<br />gram 다운 디자인</h2>
+						</div>
+						<div id="animate9_2" class="slide">
+							<!-- Swiper -->
+							<div class="swiper-container">
+								<ul class="image swiper-wrapper">
+									<li class="swiper-slide">
+										<div class="txt">
+											<strong>스노우 화이트</strong>
+											<p>눈부신 순백의 아름다움<br />하얀 눈을 그대로 담아낸 스노우 화이트</p>
+										</div>
+										<img src="../assets/img/scene_9_01.png" alt="">
+									</li>
+									<li class="swiper-slide">
+										<div class="txt white">
+											<strong>옵시디안 블랙</strong>
+											<p>순수하게 빛나는 짙은 검정의<br />흑요석을 연상시키는 옵시디안 블랙</p>
+										</div>
+										<img src="../assets/img/scene_9_02.png" alt="">
+									</li>
+									<li class="swiper-slide">
+										<div class="txt">
+											<strong>쿼츠 실버</strong>
+											<p>수정의 영롱함 <br />그 본질을 그대로 담아낸 쿼츠 실버</p>
+										</div>
+										<img src="../assets/img/scene_9_03.png" alt="">
+									</li>
+								</ul>
+								<!-- Add Pagination -->
+								<div class="swiper-page-wrap"><div class="swiper-pagination"></div></div>
+							</div>
+						</div>
+					</div>
+					<script>
+						var swiper = new Swiper('#animate9_2 .swiper-container', {
+							spaceBetween: 30,
+							effect: 'fade',
+							loop: true,
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							},
+							navigation: {
+								nextEl: '.swiper-button-next',
+								prevEl: '.swiper-button-prev',
+							},
+						});
+
+						// tween_title
+						TweenMax.set("#animate9_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate9_1", 3, {top: 60, opacity: 1})
+							.to("#animate9_1", 3, {/*opacity: 0.6,*/ delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate9_2", {opacity: 0, top:"224"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate9_2", 3, {opacity:1, top:174})
+							.to("#animate9_2", 1, {/*opacity: 0.6,*/ delay: 6})
+						
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger9",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger9",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller);
+					</script>
+				</section>
+
 				<section id="scene2" class="motionContent">
                     <div id="trigger2" class="spacer s0"></div>
 					<div id="animate2_scroll_from" style="position:absolute;top:190px;left:0;"></div>
@@ -273,194 +481,6 @@
 					</script>
 				</section>
 
-				<section id="scene4" class="motionContent">
-					<div id="trigger4" class="spacer s0"></div>
-					<div id="animate4">
-						<div class="blank"></div>
-						<div id="animate4_1" class="title">
-							<h2>빈 틈 없이 밀착된 화면<br/>감동으로 채우다</h2>
-							<p class="small">4면 슬림 베젤 디자인</p>
-						</div>
-						<div id="animate4_2" class="video" style="background-color:#000;">
-							<video id="animate4_2_video" src="../assets/img/scene_4_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
-						</div>
-					</div>
-					<script>
-						// tween_title
-						TweenMax.set("#animate4_1", {opacity:0, top: "140"});
-                        var tween_title = new TimelineMax()
-                            .to("#animate4_1", 3, {top: 60, opacity: 1})
-							.to("#animate4_1", 3, {/*opacity: 0.6,*/ delay: 4})
-
-						//tween_image
-						TweenMax.set("#animate4_2", {opacity: 0, top:"260"});
-						var tween_image1 = new TimelineMax()
-							.to("#animate4_2", 3, {opacity:1, top:210})
-							.to("#animate4_2", 1, {/*opacity: 0.6,*/ delay: 6})
-						
-						// build scene
-						var sceneOption = {
-							triggerElement: "#trigger4",
-							triggerHook: 0.6,
-							duration: "70%",
-							reverse: true
-						}
-						var sceneOption2 = {
-							triggerElement: "#trigger4",
-							triggerHook: 0.5,
-							duration: "65%",
-							reverse: true
-						}
-						var scene =  new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_title)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
-										.setTween(tween_image1)
-										.addTo(controller)
-										.on("update", function (e) {
-											//console.log(e.target.controller().info("scrollDirection"));
-										})
-										.on("enter leave", function (e) {
-											if(e.type == "enter"){
-												console.log('enter');
-												$("#animate4_2_video").get(0).play();
-											}else{
-												$("#animate4_2_video").get(0).pause();
-											}
-										})
-										.on("start end", function (e) {
-											if(e.type == "start"){
-												console.log('last Hit:: top');
-											}else{
-												console.log('last Hit:: bottom');
-											}
-										})
-										.on("progress", function (e) {
-											console.log('progress');
-										});
-					</script>
-				</section>
-					
-				<section id="scene5" class="motionContent">
-					<div id="trigger5" class="spacer s0"></div>
-					<div id="animate5_scroll_from" style="position:absolute;top:-480px;left:0"></div>
-					<div id="animate5_scroll_to" style="position:absolute;top:30px;left:0"></div>
-					<div id="animate5">
-						<div class="blank"></div>
-						<div id="animate5_1" class="title">
-							<h2>가볍고 빠르게<br/>기네스가 인정한 휴대성</h2>
-							<p class="small">최경량 1,190g 무게</p>
-						</div>
-						<div id="animate5_2" class="video" style="background-color:#000;">
-							<video id="animate5_2_video" src="../assets/mov/scene5_720_540.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
-						</div>
-						<div id="animate5_3" class="logo" style="bottom:0;">
-							<img src="../assets/img/scene_5_01.png" alt="">
-						</div>
-						<div id="animate5_4" class="desc grey" style="bottom:0;opacity: 0.6;">
-							<p>세계 최경량 16 노트북 인증 획득</p>
-							<p>(2020년 12월, 기네스 월드 레코드®)</p>
-						</div>
-					</div>
-					<script>
-						// tween_title
-						TweenMax.set("#animate5_1", {opacity:0, top: "140"});
-                        var tween_title = new TimelineMax()
-                            .to("#animate5_1", 3, {top: 60, opacity: 1})
-							.to("#animate5_1", 3, {/*opacity: 0.6,*/ delay: 4})
-
-						//tween_image
-						TweenMax.set("#animate5_2", {opacity: 0, top:"260"});
-						var tween_image1 = new TimelineMax()
-							.to("#animate5_2", 3, {opacity:1, top:210})
-							.to("#animate5_2", 1, {/*opacity: 0.6,*/ delay: 6})
-						
-						// build scene
-						var sceneOption = {
-							triggerElement: "#trigger5",
-							triggerHook: 0.6,
-							duration: "70%",
-							reverse: true
-						}
-						var sceneOption2 = {
-							triggerElement: "#trigger5",
-							triggerHook: 0.5,
-							duration: "65%",
-							reverse: true
-						}
-						var scene =  new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_title)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
-										.setTween(tween_image1)
-										.addTo(controller)
-										.on("update", function (e) {
-											//console.log(e.target.controller().info("scrollDirection"));
-										})
-										.on("enter leave", function (e) {
-											if(e.type == "enter"){
-												console.log('enter');
-												$("#animate5_2_video").get(0).play();
-											}else{
-												$("#animate5_2_video").get(0).pause();
-											}
-										});
-					</script>
-				</section>
-					
-				<section id="scene6" class="motionContent">
-					<div id="trigger6" class="spacer s0"></div>
-					<div id="animate6">
-						<div class="blank"></div>
-						<div id="animate6_1" class="title">
-							<h2>사이즈는 줄이고<br />화면은 크게<br />반전매력, 역시 gram</h2>
-						</div>
-						<div id="animate6_2" class="divider">
-							<div class="container">
-								<img src="../assets/img/scene_6_01.png" alt="">
-								<img src="../assets/img/scene_6_02.png" alt="">
-							</div>
-						</div>
-					</div>
-					<script>
-						// tween_title
-						TweenMax.set("#animate6_1", {opacity:0, top: "140"});
-                        var tween_title = new TimelineMax()
-                            .to("#animate6_1", 3, {top: 60, opacity: 1})
-							.to("#animate6_1", 3, {/*opacity: 0.6,*/ delay: 4})
-
-						//tween_image
-						TweenMax.set("#animate6_2", {opacity: 0, top:"264"});
-						var tween_image1 = new TimelineMax()
-							.to("#animate6_2", 3, {opacity:1, top:214})
-							.to("#animate6_2", 1, {/*opacity: 0.6,*/ delay: 6})
-						
-						// build scene
-						var sceneOption = {
-							triggerElement: "#trigger6",
-							triggerHook: 0.6,
-							duration: "70%",
-							reverse: true
-						}
-						var sceneOption2 = {
-							triggerElement: "#trigger6",
-							triggerHook: 0.5,
-							duration: "65%",
-							reverse: true
-						}
-						var scene =  new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_title)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
-										.setTween(tween_image1)
-										.addTo(controller);
-
-						$(window).on("load", function(){
-							$('.container').twentytwenty({ default_offset_pct : 0.4 });
-						});
-					</script>
-				</section>
-					
 				<section id="scene7" class="motionContent">
 					<div id="trigger7" class="spacer s0"></div>
 					<div id="animate7_scroll_from" style="position:absolute;top:-500px;left:0"></div>
@@ -531,7 +551,7 @@
 										.addTo(controller);
 					</script>
 				</section>
-					
+
 				<section id="scene8" class="motionContent">
 					<div id="trigger8" class="spacer s0"></div>
 					<div id="animate8">
@@ -590,130 +610,41 @@
 										});
 					</script>
 				</section>
-					
-				<section id="scene9" class="motionContent">
-					<div id="trigger9" class="spacer s0"></div>
-					<div id="animate9">
+
+				<section id="scene4" class="motionContent">
+					<div id="trigger4" class="spacer s0"></div>
+					<div id="animate4">
 						<div class="blank"></div>
-						<div id="animate9_1" class="title">
-							<h2>열어도 닫아도<br />gram 다운 디자인</h2>
+						<div id="animate4_1" class="title">
+							<h2>빈 틈 없이 밀착된 화면<br/>감동으로 채우다</h2>
+							<p class="small">4면 슬림 베젤 디자인</p>
 						</div>
-						<div id="animate9_2" class="slide">
-							<!-- Swiper -->
-							<div class="swiper-container">
-								<ul class="image swiper-wrapper">
-									<li class="swiper-slide">
-										<div class="txt">
-											<strong>스노우 화이트</strong>
-											<p>눈부신 순백의 아름다움<br />하얀 눈을 그대로 담아낸 스노우 화이트</p>
-										</div>
-										<img src="../assets/img/scene_9_01.png" alt="">
-									</li>
-									<li class="swiper-slide">
-										<div class="txt white">
-											<strong>옵시디안 블랙</strong>
-											<p>순수하게 빛나는 짙은 검정의<br />흑요석을 연상시키는 옵시디안 블랙</p>
-										</div>
-										<img src="../assets/img/scene_9_02.png" alt="">
-									</li>
-									<li class="swiper-slide">
-										<div class="txt">
-											<strong>쿼츠 실버</strong>
-											<p>수정의 영롱함 <br />그 본질을 그대로 담아낸 쿼츠 실버</p>
-										</div>
-										<img src="../assets/img/scene_9_03.png" alt="">
-									</li>
-								</ul>
-								<!-- Add Pagination -->
-								<div class="swiper-page-wrap"><div class="swiper-pagination"></div></div>
-							</div>
+						<div id="animate4_2" class="video" style="background-color:#000;">
+							<video id="animate4_2_video" src="../assets/img/scene_4_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
-						var swiper = new Swiper('#animate9_2 .swiper-container', {
-							spaceBetween: 30,
-							effect: 'fade',
-							loop: true,
-							pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
-							},
-							navigation: {
-								nextEl: '.swiper-button-next',
-								prevEl: '.swiper-button-prev',
-							},
-						});
-
 						// tween_title
-						TweenMax.set("#animate9_1", {opacity:0, top: "140"});
+						TweenMax.set("#animate4_1", {opacity:0, top: "140"});
                         var tween_title = new TimelineMax()
-                            .to("#animate9_1", 3, {top: 60, opacity: 1})
-							.to("#animate9_1", 3, {/*opacity: 0.6,*/ delay: 4})
+                            .to("#animate4_1", 3, {top: 60, opacity: 1})
+							.to("#animate4_1", 3, {/*opacity: 0.6,*/ delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate9_2", {opacity: 0, top:"224"});
+						TweenMax.set("#animate4_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate9_2", 3, {opacity:1, top:174})
-							.to("#animate9_2", 1, {/*opacity: 0.6,*/ delay: 6})
+							.to("#animate4_2", 3, {opacity:1, top:210})
+							.to("#animate4_2", 1, {/*opacity: 0.6,*/ delay: 6})
 						
 						// build scene
 						var sceneOption = {
-							triggerElement: "#trigger9",
+							triggerElement: "#trigger4",
 							triggerHook: 0.6,
 							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
-							triggerElement: "#trigger9",
-							triggerHook: 0.5,
-							duration: "65%",
-							reverse: true
-						}
-						var scene =  new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_title)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
-										.setTween(tween_image1)
-										.addTo(controller);
-					</script>
-				</section>
-					
-				<section id="scene10" class="motionContent">
-					<div id="trigger10" class="spacer s0"></div>
-					<div id="animate10_scroll_from" style="position:absolute;top:-480px;left:0"></div>
-					<div id="animate10_scroll_to" style="position:absolute;top:30px;left:0"></div>
-					<div id="animate10">
-						<div class="blank"></div>
-						<div id="animate10_1" class="title">
-							<h2>최고의 순간까지<br />함께하는 배터리</h2>
-							<p class="small">800 Wh 대용량 배터리 최대 22시간 사용</p>
-						</div>
-						<div id="animate10_2" class="video" style="background-color:#000;">
-							<video id="animate10_2_video" src="../assets/mov/scene10_720_720.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
-						</div>
-					</div>
-					<script>
-						// tween_title
-						TweenMax.set("#animate10_1", {opacity:0, top: "140"});
-						var tween_title = new TimelineMax()
-							.to("#animate10_1", 3, {top: 60, opacity: 1})
-							.to("#animate10_1", 3, {/*opacity: 0.6,*/ delay: 4})
-
-						//tween_image
-						TweenMax.set("#animate10_2", {opacity: 0, top:"264"});
-						var tween_image1 = new TimelineMax()
-							.to("#animate10_2", 3, {opacity:1, top:214})
-							.to("#animate10_2", 1, {/*opacity: 0.6,*/ delay: 6})
-
-						// build scene
-						var sceneOption = {
-							triggerElement: "#trigger10",
-							triggerHook: 0.6,
-							duration: "70%",
-							reverse: true
-						}
-						var sceneOption2 = {
-							triggerElement: "#trigger10",
+							triggerElement: "#trigger4",
 							triggerHook: 0.5,
 							duration: "65%",
 							reverse: true
@@ -730,75 +661,24 @@
 										.on("enter leave", function (e) {
 											if(e.type == "enter"){
 												console.log('enter');
-												$("#animate10_2_video").get(0).play();
+												$("#animate4_2_video").get(0).play();
 											}else{
-												$("#animate10_2_video").get(0).pause();
+												$("#animate4_2_video").get(0).pause();
 											}
-										});
-					</script>
-				</section>
-					
-				<section id="scene11" class="motionContent">
-					<div id="trigger11" class="spacer s0"></div>
-					<div id="animate11">
-						<div class="blank"></div>
-						<div id="animate11_1" class="title">
-							<h2>언제 어디서든<br />강인한 gram</h2>
-							<p class="small">미 국방부 내구성 테스트를 통과한 극강의 gram16</p>
-						</div>
-						<div id="animate11_2" class="video" style="background-color:initial;">
-							<video id="animate11_2_video" src="../assets/mov/scene11_720_800.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
-						</div>
-						<div id="animate11_3" class="desc">
-							<img src="../assets/img/scene_11_04.png" alt="">
-						</div>
-					</div>
-					<script>
-						// tween_title
-						TweenMax.set("#animate11_1", {opacity:0, top: "140"});
-						var tween_title = new TimelineMax()
-							.to("#animate11_1", 3, {top: 60, opacity: 1})
-							.to("#animate11_1", 3, {/*opacity: 0.6,*/ delay: 4})
-
-						//tween_image
-						TweenMax.set("#animate11_2", {opacity: 0, top:"264"});
-						var tween_image1 = new TimelineMax()
-							.to("#animate11_2", 3, {opacity:1, top:214})
-							.to("#animate11_2", 1, {/*opacity: 0.6,*/ delay: 6})
-
-						// build scene
-						var sceneOption = {
-							triggerElement: "#trigger11",
-							triggerHook: 0.6,
-							duration: "70%",
-							reverse: true
-						}
-						var sceneOption2 = {
-							triggerElement: "#trigger11",
-							triggerHook: 0.5,
-							duration: "70%",// common: 65%
-							reverse: true
-						}
-						var scene =  new ScrollMagic.Scene(sceneOption)
-										.setTween(tween_title)
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption2)
-										.setTween(tween_image1)
-										.addTo(controller)
-										.on("update", function (e) {
-											//console.log(e.target.controller().info("scrollDirection"));
 										})
-										.on("enter leave", function (e) {
-											if(e.type == "enter"){
-												console.log('enter');
-												$("#animate11_2_video").get(0).play();
+										.on("start end", function (e) {
+											if(e.type == "start"){
+												console.log('last Hit:: top');
 											}else{
-												$("#animate11_2_video").get(0).pause();
+												console.log('last Hit:: bottom');
 											}
+										})
+										.on("progress", function (e) {
+											console.log('progress');
 										});
 					</script>
 				</section>
-					
+				
 				<section id="scene12" class="motionContent">
 					<div id="trigger12" class="spacer s0"></div>
 					<div id="animate12">
@@ -892,7 +772,128 @@
 										.addTo(controller);
 					</script>
 				</section>
-					
+				
+				<section id="scene10" class="motionContent">
+					<div id="trigger10" class="spacer s0"></div>
+					<div id="animate10_scroll_from" style="position:absolute;top:-480px;left:0"></div>
+					<div id="animate10_scroll_to" style="position:absolute;top:30px;left:0"></div>
+					<div id="animate10">
+						<div class="blank"></div>
+						<div id="animate10_1" class="title">
+							<h2>최고의 순간까지<br />함께하는 배터리</h2>
+							<p class="small">800 Wh 대용량 배터리 최대 22시간 사용</p>
+						</div>
+						<div id="animate10_2" class="video" style="background-color:#000;">
+							<video id="animate10_2_video" src="../assets/mov/scene10_720_720.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate10_1", {opacity:0, top: "140"});
+						var tween_title = new TimelineMax()
+							.to("#animate10_1", 3, {top: 60, opacity: 1})
+							.to("#animate10_1", 3, {/*opacity: 0.6,*/ delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate10_2", {opacity: 0, top:"264"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate10_2", 3, {opacity:1, top:214})
+							.to("#animate10_2", 1, {/*opacity: 0.6,*/ delay: 6})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger10",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger10",
+							triggerHook: 0.5,
+							duration: "65%",
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate10_2_video").get(0).play();
+											}else{
+												$("#animate10_2_video").get(0).pause();
+											}
+										});
+					</script>
+				</section>
+
+				<section id="scene11" class="motionContent">
+					<div id="trigger11" class="spacer s0"></div>
+					<div id="animate11">
+						<div class="blank"></div>
+						<div id="animate11_1" class="title">
+							<h2>언제 어디서든<br />강인한 gram</h2>
+							<p class="small">미 국방부 내구성 테스트를 통과한 극강의 gram16</p>
+						</div>
+						<div id="animate11_2" class="video" style="background-color:initial;">
+							<video id="animate11_2_video" src="../assets/mov/scene11_720_800.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
+						</div>
+						<div id="animate11_3" class="desc">
+							<img src="../assets/img/scene_11_04.png" alt="">
+						</div>
+					</div>
+					<script>
+						// tween_title
+						TweenMax.set("#animate11_1", {opacity:0, top: "140"});
+						var tween_title = new TimelineMax()
+							.to("#animate11_1", 3, {top: 60, opacity: 1})
+							.to("#animate11_1", 3, {/*opacity: 0.6,*/ delay: 4})
+
+						//tween_image
+						TweenMax.set("#animate11_2", {opacity: 0, top:"264"});
+						var tween_image1 = new TimelineMax()
+							.to("#animate11_2", 3, {opacity:1, top:214})
+							.to("#animate11_2", 1, {/*opacity: 0.6,*/ delay: 6})
+
+						// build scene
+						var sceneOption = {
+							triggerElement: "#trigger11",
+							triggerHook: 0.6,
+							duration: "70%",
+							reverse: true
+						}
+						var sceneOption2 = {
+							triggerElement: "#trigger11",
+							triggerHook: 0.5,
+							duration: "70%",// common: 65%
+							reverse: true
+						}
+						var scene =  new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_title)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image1)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												console.log('enter');
+												$("#animate11_2_video").get(0).play();
+											}else{
+												$("#animate11_2_video").get(0).pause();
+											}
+										});
+					</script>
+				</section>
+
 				<section id="scene14" class="motionContent">
 					<div id="trigger14" class="spacer s0"></div>
 					<div id="animate14">
@@ -1222,7 +1223,8 @@
 					</script>
 				</section>
 
-				<div class="spacer s_viewport"></div>
+				<!-- <div class="spacer s_viewport"></div> -->
+				<div class="spacer s2"></div>
 			</div>
 		</div>
 	</div>
