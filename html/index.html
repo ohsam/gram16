@@ -374,9 +374,9 @@
 							.to("#animate2_1", 2, {/*opacity: 0.8, */top:-10, delay: 3})
 							
 						// tween_image
-						TweenMax.set("#animate2_2", {scale: "1", top: "-45px"});
+						TweenMax.set("#animate2_2", {scale: "1.3", top: "-60px"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate2_2", 5, {scale: 0.25, top:300, ease: Cubic.easeInOut})
+							.to("#animate2_2", 5, {scale: 0.25, top:250, ease: Cubic.easeInOut})
 							.to("#animate2_2", 2, {top: 260, /*opacity: 0.6,*/ delay: 3, ease: Cubic.easeIn})
 						
 						TweenMax.set("#animate2_2_info", {opacity:0});
@@ -384,11 +384,14 @@
 							.to("#animate2_2_info", 4, {opacity: 1, delay: 5})
 							.to("#animate2_2_info", 1, {})
 
-						TweenMax.set("#animate2_3", {opacity:0, top: "620px"});
+						TweenMax.set("#animate2_3", {opacity:0, top: "550px"});
 						var tween_image3 = new TimelineMax()
-							.to("#animate2_3", 4, {opacity: 1, top:590, delay: 4})
-							.to("#animate2_3", 0.5, {/*opacity: 0.6,*/ top:580, delay: 1.5})
-						
+							.to("#animate2_3", 4, {opacity: 1, top:520, delay: 4})
+							.to("#animate2_3", 0.5, {/*opacity: 0.6,*/ top:510, delay: 1.5})
+
+						var tween_image_wrap = new TimelineMax()
+							.to("#animate2", 5, {height:590, delay: 5})
+
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger2",
@@ -398,6 +401,7 @@
 						}
 						var scene = new ScrollMagic.Scene(sceneOption)
 										.setPin("#animate2")
+										//.addIndicators({name: "scene2 (duration: 100%)"})
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
@@ -411,82 +415,76 @@
 						new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_image3)
 										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image_wrap)
+										.addTo(controller);
 					</script>
 				</section>
 
 				<section id="scene3" class="motionContent">
 					<div id="trigger3" class="spacer s0"></div>
 					<div id="animate3">
-						<div id="animate3_0" class="title">
+						<div class="blank"></div>
+						<div id="animate3_1" class="title">
 							<h2>당신의 작업을 <br />더 빠르고 효율적으로</h2>
 							<p class="small">16:9 보다 더 넓은 16:10 화면비</p>
-							<div class="center">
-								<a href="#none" class="button">사진·영상 편집</a>
-								<a href="#none" class="button">문서 작업</a>
-							</div>
 						</div>
-						<div id="animate3_1">
-							<img id="animate3_1_other" src="../assets/img/scene_3_02.png" alt=""/>
-							<img id="animate3_1_first" style="top:0;" src="../assets/img/scene_3_01.png" alt=""/>
-						</div>
-						<div id="animate3_2">
-							<img src="../assets/img/scene_3_03.png" alt=""/>
+						<div id="animate3_2" class="video" style="background-color:#fff;">
+							<video id="animate3_2_video" src="../assets/mov/scene3_720_934.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 						</div>
 					</div>
 					<script>
-						TweenMax.set("#animate3_0", {opacity:0, top: "140px"});
-						var tween_title = new TimelineMax()
-							// .to("#animate3_0", 5, {top:"-85px", ease: Cubic.easeInOut})
-							// .to("#animate3_0 .button:first-child", 5, {opacity:0.6, delay:4, ease: Cubic.easeInOut})
-							// .to("#animate3_0", 7, {top:"-=100", opacity:0.6, delay:3, ease: Cubic.easeInOut})
-							.to("#animate3_0", 3, {top: 60, opacity: 1})
-							.to("#animate3_0", 3, {/*opacity: 0.6,*/ delay: 4})
+						// tween_title
+						TweenMax.set("#animate3_1", {opacity:0, top: "140"});
+                        var tween_title = new TimelineMax()
+                            .to("#animate3_1", 3, {top: 60, opacity: 1})
+							.to("#animate3_1", 3, {/*opacity: 0.6,*/ delay: 4})
 
-						// tween_image
-						TweenMax.set("#animate3_1_other", {bottom: "100%"});
+						//tween_image
+						TweenMax.set("#animate3_2", {opacity: 0, top:"260"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate3_1_other", 3, {bottom:0, delay:2})
-							.to("#animate3_1", 5, {left:"-100%", delay:5, ease: Cubic.easeInOut})
-							.to("#animate3_0 .button:first-child", 0, {opacity:0.4})
-							.to("#animate3_0 .button:last-child", 0, {opacity:1})
+							.to("#animate3_2", 3, {opacity:1, top:210})
+							.to("#animate3_2", 1, {/*opacity: 0.6,*/ delay: 6})
 						
-						TweenMax.set("#animate3_2", {left: "100%"});
-						var tween_image2 = new TimelineMax()
-							.to("#animate3_2", 3, {left:25, delay:7, ease: Cubic.easeInOut})
-							//.to("#animate3_2", 4, {top:"-=100", opacity:0.6, delay:1, ease: Cubic.easeInOut})
-							.to("#animate3_2", 3, {/*opacity:0.6,*/ delay:1})
-
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger3",
-							triggerHook: 0.0,
-							duration: "180%",
+							triggerHook: 0.6,
+							duration: "70%",
 							reverse: true
 						}
 						var sceneOption2 = {
 							triggerElement: "#trigger3",
 							triggerHook: 0.5,
-							duration: "180%",
+							duration: "65%",
 							reverse: true
 						}
-						var sceneOption3 = {
-							triggerElement: "#trigger3",
-							triggerHook: 0.6,
-							duration: "270%",
+						var sceneOption_video = {
+							triggerElement: "#animate3_2",
+							triggerHook: 0.5,
+							duration: "60%",
 							reverse: true
 						}
-						var scene = new ScrollMagic.Scene(sceneOption)
-										.setPin("#animate3")
-										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
+						var scene =  new ScrollMagic.Scene(sceneOption)
 										.setTween(tween_title)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
-						new ScrollMagic.Scene(sceneOption3)
-										.setTween(tween_image2)
-										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption_video)
+										.addTo(controller)
+										.on("update", function (e) {
+											//console.log(e.target.controller().info("scrollDirection"));
+										})
+										.on("enter leave", function (e) {
+											if(e.type == "enter"){
+												var v = $("#animate3_2_video").get(0);
+												v.currentTime = 0;
+												v.play();
+											}else{
+												$("#animate3_2_video").get(0).pause();
+											}
+										});
 					</script>
 				</section>
 
@@ -619,7 +617,6 @@
 										})
 										.on("enter leave", function (e) {
 											if(e.type == "enter"){
-												console.log('enter');
 												var v = $("#animate8_2_video").get(0);
 												v.currentTime = 0;
 												v.play();
@@ -1145,7 +1142,7 @@
 							<h2>깊이있게 웅장하게</h2>
 							<p class="small">DTS:Ultra 적용으로 입체적인 사운드</p>
 						</div>
-						<div id="animate17_2" class="video" style="background-color:#000;">
+						<div id="animate17_2" class="video" style="background-color:#343434;">
 							<video id="animate17_2_video" src="../assets/img/scene_10_video_dummy.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
 							<!-- <video id="animate17_2_video" data-inline-media="" data-inline-media-plugins="AnimLoad, AnimPlay, ViewportSource" data-inline-media-basepath="/105/media/us/iphone-12-pro/2020/e70ffbd8-50f1-40f3-ac36-0f03a15ac314/anim/compare/" muted="" preload="none" aria-hidden="true" playsinline="" src="https://www.apple.com/105/media/us/iphone-12-pro/2020/e70ffbd8-50f1-40f3-ac36-0f03a15ac314/anim/compare/large.mp4"></video> -->
 						</div>
