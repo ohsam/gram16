@@ -269,3 +269,12 @@ video {
 .popup .content strong {font-size:20px;color:#222;}
 .popup .content p {margin-top:5px;font-size:12px;line-height:19px;color:#222;}
 .popup .content span {margin-top:15px;display:block;font-size:10px;color:#888;}
+
+.move-top {
+    opacity: 0;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+.move-top.show {opacity:1}
+.move-top > a {position:fixed;z-index:99;right:15px;bottom:15px;display:block;width:40px;height:40px;font-size:0;background:url("../img/btn_top.png") no-repeat;background-size:contain;}

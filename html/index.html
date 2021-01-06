@@ -1272,6 +1272,23 @@
 			</div>
 		</div>
 	</div>
+	<div class="move-top">
+		<a href="#top" title="Go to Top" class="sp">go top</a>
+	</div>
+	<script>
+		$(window).on("scroll", function(){
+			var scrollTop = $(this).scrollTop();
+			if(scrollTop >= 700) {
+				$('.move-top').addClass("show");
+			}else{
+				$('.move-top').removeClass("show");
+			}
+		}).trigger("scroll");
+		$('.move-top > a').on("click", function(e){
+			$("html, body").animate({scrollTop: 0}, 500);
+			e.preventDefault();
+		})
+	</script>
 	<div class="popup">
 		<div class="inner">
 			<a href="#none" class="close"><img src="../assets/img/popup_close.png" alt=""></a>
