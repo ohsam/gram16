@@ -134,6 +134,7 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 #animate8 {}
 #animate8 .blank {padding-top:264px;padding-bottom:80%;}
 #animate8 .video {position:absolute;width:100%;padding-bottom:80%;overflow:hidden;}
+#animate8 .video:before {content:'';position:absolute;left:0;top:1px;display:block;width:100%;height:1px;background:white;z-index:10;}
 #animate8 .video video {position:absolute;top:-70px;left:50%;transform:translateX(-50%);width:160%;height:160%;}
 
 #animate9 {}
