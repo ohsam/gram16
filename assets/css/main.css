@@ -62,6 +62,12 @@ i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url(".
 .twentytwenty-wrapper.twentytwenty-horizontal .twentytwenty-right-arrow {margin-right:-14px;border-left:5px solid #000}
 .twentytwenty-overlay:hover {display: none;}
 
+/* ios video border */
+video {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
 #animate1 {height:530px;background:#31302e;}
 #animate1_1 {z-index:2;}
 #animate1_2 {position:absolute;width:100%;top:175px;z-index:1;}
