@@ -22,7 +22,7 @@ html.lock {overflow:hidden;}
 }
 #example-wrapper section#titlechart .button-wrap {display:flex;margin:10px 0 30px;}
 .button-wrap a {display:block;width:50%;padding:5px 10px;border:1px solid #ccc;border-radius:5px;color:#999;text-align:center;}
-.button-wrap a.on {border:1px solid #888;color:#555;}
+.button-wrap a.on {border:2px solid #888;color:#555;}
 .button-wrap a + a {margin-left:10px;}
 
 .scrollContent {
