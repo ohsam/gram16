@@ -274,7 +274,7 @@ video {
 #animate18 .blank {padding-top:212px;padding-bottom:calc(86.2% + 120px);}
 #animate18 .image {position:absolute;margin-bottom:50px;left:25px;width:calc(100% - 50px);border-radius:15px;overflow:hidden;}
 #animate18 .image img {display:block;width:100%;}
-#animate18 .desc {position:absolute;left:25px;bottom:86px;width:calc(100% - 50px);}
+#animate18 .desc {position:absolute;left:25px;bottom:86px;width:calc(100% - 50px);font-size:12px;}
 
 .popup.open {display:block;}
 .popup {display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;}
