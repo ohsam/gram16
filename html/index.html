@@ -67,19 +67,19 @@
 						</div>
 						<ul id="animate1_2">
 							<li style="top:60px">
-								<a href="#" data-scroll-from="#animate2_scroll_from", data-scroll-to="#animate2_scroll_to">
+								<a href="#" data-scroll-from="#animate2_scroll_from", data-scroll-to="#animate2_scroll_to" data-target-scroll-top="3200">
 									<div class="sub">11<em>%</em></div>
 									<div class="desc">더 커진 화면<i class="circ-arrow-down"></i></div>
 								</a>
 							</li>
 							<li style="top:134px">
-								<a href="#" data-scroll-from="#animate5_scroll_from", data-scroll-to="#animate5_scroll_to">
+								<a href="#" data-scroll-from="#animate5_scroll_from", data-scroll-to="#animate5_scroll_to" data-target-scroll-top="530">
 									<div class="sub">1,190<em>g</em></div>
 									<div class="desc">세계 최경량 무게<i class="circ-arrow-down"></i></div>
 								</a>
 							</li>
 							<li style="top:208px">
-								<a href="#" data-scroll-from="#animate7_scroll_from", data-scroll-to="#animate7_scroll_to">
+								<a href="#" data-scroll-from="#animate7_scroll_from", data-scroll-to="#animate7_scroll_to" data-target-scroll-top="4753">
 									<div class="sub">200<em>%</em></div>
 									<div class="desc">더 선명하게<i class="circ-arrow-down"></i></div>
 								</a>
@@ -128,11 +128,14 @@
 
 							console.log(time)
 
+							// $("html, body").animate({
+							// 	scrollTop: fromTop
+							// }, 0).animate({
+							// 	scrollTop: toTop
+							// }, time, "swing");
 							$("html, body").animate({
-								scrollTop: fromTop
-							}, 0).animate({
-								scrollTop: toTop
-							}, time, "swing");
+								scrollTop: $(this).data("targetScrollTop")
+							}, 500, "swing");
 						})
 
 					</script>
@@ -1375,7 +1378,7 @@
 		})
 		$(window).on("scroll", function(){
 			var scrollTop = $(this).scrollTop();
-			if(scrollTop >= 700) {
+			if(scrollTop >= 530) {
 				$('.move-top').addClass("show");
 			}else{
 				$('.move-top').removeClass("show");
