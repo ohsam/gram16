@@ -54,28 +54,6 @@
 							$target.each(function(i , el){
 								$(this).twentytwenty({ default_offset_pct : Number($(this).data("offsetPct")) || 0.4 });
 							})
-
-							var phase = 0;
-							var scenario = [
-								function(){$("html, body").animate({scrollTop: 800}, 1500)},
-								function(){$("html, body").animate({scrollTop: 1350}, 1500)},
-								function(){$("html, body").animate({scrollTop: 1950}, 1500)},
-								function(){$("html, body").animate({scrollTop: 2550}, 1200)},
-								function(){$("html, body").animate({scrollTop: 3850}, 2500)},
-								function(){$("html, body").animate({scrollTop: 4750}, 1500)},
-								function(){$("html, body").animate({scrollTop: 5400}, 1500)},
-								function(){$("html, body").animate({scrollTop: 6000}, 1500)},
-								function(){$("html, body").animate({scrollTop: 6550}, 1500)},
-								function(){$("html, body").animate({scrollTop: 7150}, 1500)},
-								function(){$("html, body").animate({scrollTop: 7680}, 1500)},
-								function(){$("html, body").animate({scrollTop: 8250}, 1500)}
-							]
-							$(window).on("keydown", function(e){
-								if(e.keyCode == "39"){
-									scenario[phase]();
-									phase ++;
-								}
-							})
 						});
 					</script>
                 </section>
