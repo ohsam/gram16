@@ -50,13 +50,18 @@ html.lock {overflow:hidden;}
     z-index: 99;
 }
 #titlechart .tab {display:inline-block;width:100%;height:100%;}
-#titlechart .tab .top {display:inline-block;width:100%;height:44px;padding:12px;}
+#titlechart .tab:after {content:'';position:absolute;left:0;bottom:0px;display:block;width:100%;height:1px;background:#666;}
+#titlechart .tab .top {display:inline-block;width:100%;height:40px;padding:11px 20px 4px;border-bottom:1px solid #666;}
 #titlechart .tab .top .logo {display:inline-block;height:20px;margin-top:1px;color:#fff;vertical-align:top;}
 #titlechart .tab .top .logo >img {width:auto;height:100%;}
 #titlechart .tab .top .model {display:inline-block;margin-left:10px;font-size:12px;color:#fff;}
-#titlechart .tab > ul {display:inline-block;width:100%;}
+#titlechart .tab > ul {position:relative;display:inline-block;width:100%;z-index:1;}
 #titlechart .tab > ul > li {float:left;}
-#titlechart .tab > ul > li > a {display:block;padding:3px 15px 2px;color:#fff;border-bottom:2px solid transparent;text-decoration:none;}
+/* #titlechart .tab > ul > li + li {margin-left:10px;} */
+#titlechart .tab > ul > li > a {display:block;padding:7px 20px 6px;font-size:11px;color:#fff;border-bottom:2px solid transparent;text-decoration:none;}
+#titlechart .tab > ul > li > a {padding-left:27px;padding-right:27px;}
+#titlechart .tab > ul > li:first-child > a,
+#titlechart .tab > ul > li:last-child > a {padding-left:20px;padding-right:20px;}
 #titlechart .tab > ul > li.on > a {border-bottom:2px solid #990033;}
 
 
