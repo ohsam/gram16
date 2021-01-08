@@ -47,36 +47,6 @@
 					<script>
 						// init controller
 						var controller = new ScrollMagic.Controller();
-
-						// divider (twentytwenty)
-						$(window).on("load", function(){
-							var $target = $('.divider .container');
-							$target.each(function(i , el){
-								$(this).twentytwenty({ default_offset_pct : Number($(this).data("offsetPct")) || 0.4 });
-							})
-
-							var phase = 0;
-							var scenario = [
-								function(){$("html, body").animate({scrollTop: 800}, 1500)},
-								function(){$("html, body").animate({scrollTop: 1350}, 1500)},
-								function(){$("html, body").animate({scrollTop: 1950}, 1500)},
-								function(){$("html, body").animate({scrollTop: 2550}, 1200)},
-								function(){$("html, body").animate({scrollTop: 3850}, 2500)},
-								function(){$("html, body").animate({scrollTop: 4750}, 1500)},
-								function(){$("html, body").animate({scrollTop: 5400}, 1500)},
-								function(){$("html, body").animate({scrollTop: 6000}, 1500)},
-								function(){$("html, body").animate({scrollTop: 6550}, 1500)},
-								function(){$("html, body").animate({scrollTop: 7150}, 1500)},
-								function(){$("html, body").animate({scrollTop: 7680}, 1500)},
-								function(){$("html, body").animate({scrollTop: 8250}, 1500)}
-							]
-							$(window).on("keydown", function(e){
-								if(e.keyCode == "39"){
-									scenario[phase]();
-									phase ++;
-								}
-							})
-						});
 					</script>
                 </section>
                 
@@ -249,7 +219,7 @@
 							<h2>사이즈는 줄이고<br />화면은 크게<br />반전매력 역시 그램</h2>
 						</div>
 						<div id="animate6_2" class="divider">
-							<div class="container" data-offset-pct="0.4">
+							<div class="container">
 								<img src="../assets/img/scene_6_01.png" alt="">
 								<img src="../assets/img/scene_6_02.png" alt="">
 							</div>
@@ -287,6 +257,10 @@
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
+
+						$(window).on("load", function(){
+							$('.container').twentytwenty({ default_offset_pct : 0.4 });
+						});
 					</script>
 				</section>
 
@@ -524,19 +498,16 @@
 							<h2>2배 더 선명하게<br />깨지지 않는 아름다움</h2>
 							<p class="small">Full HD(1920x1080) 보다 2배 정밀한<br>초고해상도 WQXGA(2560x1600)</p>
 						</div>
-						<!-- <div id="animate7_2" class="divider">
+						<div id="animate7_2" class="divider">
 							<div class="image last">
 								<img src="../assets/img/scene_7_02.png" alt="">
 							</div>
 							<div id="animate7_2_blur" class="image first" style="width:100%;">
 								<img src="../assets/img/scene_7_01.png" alt="">
 							</div>
-						</div> -->
-						<div id="animate7_2" class="divider">
-							<div class="container" data-offset-pct="0.5">
-								<img src="../assets/img/scene_7_01.png" alt="">
-								<img src="../assets/img/scene_7_02.png" alt="">
-							</div>
+							<!-- <a class="drag" style="left:40%;">
+								<img src="../assets/img/scene_6_03.png" alt="">
+							</a> -->
 						</div>
 					</div>
 					<script>
@@ -552,10 +523,10 @@
 							.to("#animate7_2", 3, {opacity:1, top:236})
 							.to("#animate7_2", 1, {/*opacity: 0.6,*/ delay: 6})
 
-						// TweenMax.set("#animate7_2_blur", {width:"100%"});
-						// var tween_image2 = new TimelineMax()
-						// 	.to("#animate7_2_blur", 8, {width:"0%", delay:2})
-						// 	// .to("#animate7_2_blur", 1, {opacity: 0.6, delay: 6})
+						TweenMax.set("#animate7_2_blur", {width:"100%"});
+						var tween_image2 = new TimelineMax()
+							.to("#animate7_2_blur", 8, {width:"0%", delay:2})
+							// .to("#animate7_2_blur", 1, {opacity: 0.6, delay: 6})
 						
 						// build scene
 						var sceneOption = {
@@ -585,7 +556,6 @@
 						new ScrollMagic.Scene(sceneOption3)
 										.setTween(tween_image2)
 										.addTo(controller);
-						
 					</script>
 				</section>
 
