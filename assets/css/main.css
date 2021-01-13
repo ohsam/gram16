@@ -325,4 +325,4 @@ video {
     transition: opacity .4s ease;
 }
 .move-top.show {opacity:1}
-.move-top > a {position:fixed;z-index:99;right:15px;bottom:32px;display:block;width:40px;height:40px;font-size:0;background:url("../img/btn_top.png") no-repeat;background-size:contain;}
+.move-top > a {position:fixed;z-index:99;right:15px;bottom:50px;display:block;width:40px;height:40px;font-size:0;background:url("../img/btn_top.png") no-repeat;background-size:contain;}
