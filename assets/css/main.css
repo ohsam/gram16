@@ -82,6 +82,7 @@ html.lock {overflow:hidden;}
 
 .white {color:#fff;}
 .grey, .gray {color:#888;}
+.imageFitW > img {width:100%;height:auto;}
 
 i.circ-arrow-down {display:inline-block;width:13px;height:13px;background:url("../img/ico_circArrow_down.png") center center no-repeat;background-size:contain;}
 
