@@ -263,10 +263,10 @@ video {
 #animate15 .performance .type2 .image {margin-top:12px;width:300px;}
 #animate15 .desc {position:absolute;left:0;width:100%;padding:0 20px;font-size:12px;}
 #animate15 .desc p + p {margin-top:3px;padding-left:8px;text-indent:-8px;}
-#animate15_1 .desc {width:100%;padding:0 20px;margin-top:30px;font-size:12px;}
+#animate15_1 .desc {width:100%;padding:0 20px;margin-top:20px;font-size:12px;}
 #animate15_1 .desc p + p {margin-top:3px;padding-left:8px;text-indent:-8px;}
 #animate15A {background-color:#000;}
-#animate15A .blank {padding-top:calc(66% + 140px);}
+#animate15A .blank {padding-top:calc(66% + 130px);}
 #animate15A .icons {position:absolute;left:0;}
 #animate15A .icons img {display:block;width:100%;}
 
