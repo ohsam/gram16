@@ -149,7 +149,7 @@
 						<div class="blank"></div>
 						<div id="animate5_eye" class="eyebrow">최경량 1,190g</div>
 						<div id="animate5_1" class="title">
-							<h2>가볍고 편하게<br/>기네스가 인정한 휴대성</h2>
+							<h2>기네스가 인정한 <br/>가벼움</h2>
 						</div>
 						<div id="animate5_2" class="video" style="background-color:#000;">
 							<video id="animate5_2_video" src="../assets/mov/scene5_720_540.mp4" muted="" playsinline="" width="100%" height="100%" loop></video>
@@ -251,6 +251,12 @@
 								<img src="../assets/img/scene_6_02.png" alt="">
 							</div>
 						</div>
+						<div id="animate6_3" class="desc">
+							<div class="small">
+								<p>* 그램360 16 : 화면 대각선 40.6cm</p>
+								<p>* 울트라 PC(15U50N) : 화면 대각선 39.6cm</p>
+							</div>
+						</div>
 					</div>
 					<script>
 						// tween_eye
@@ -270,6 +276,11 @@
 						var tween_image1 = new TimelineMax()
 							.to("#animate6_2", 3, {opacity:1, top:225})
 							.to("#animate6_2", 1, {/*opacity: 0.6,*/ delay: 6})
+						
+						TweenMax.set("#animate6_3", {opacity: 0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate6_3", 2, {opacity: 1, delay: 6.5})
+							.to("#animate6_3", 1.5, {})
 						
 						// build scene
 						var sceneOption = {
@@ -295,6 +306,9 @@
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image2)
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption_eye)
 										.setTween(tween_eye)
@@ -404,8 +418,8 @@
 						<div id="animate2_3" class="desc">
 							<div class="sub">4면 슬림 베젤로 컴팩트한 사이즈에 <br/>대화면을 담아 더 큰 몰입감을 느낄 수 있습니다 </div>
 							<div class="small">
-								<p>*16형 그램 16 기준: 40.6cm</p>
-								<p>*15형 울트라 PC(15U50N 기준): 39.6cm</p>
+								<p>* 16형 그램 16 기준 : 화면 대각선 40.6cm</p>
+								<p>* 15형 울트라 PC(15U50N 기준) : 화면 대각선 39.6cm</p>
 							</div>
 						</div>
 					</div>
@@ -536,7 +550,7 @@
 					<div id="animate7">
 						<div class="blank"></div>
 						<div id="animate7_1" class="title">
-							<h2>2배 더 선명하게<br />깨지지 않는 아름다움</h2>
+							<h2>2배 더 선명하게 <br />생생함으로 더 즐겁게</h2>
 							<p class="small">Full HD(1920x1080) 보다 2배 정밀한<br>초고해상도 WQXGA(2560x1600)</p>
 						</div>
 						<!-- <div id="animate7_2" class="divider">
@@ -763,6 +777,11 @@
 						<div id="animate12_2" class="image">
 							<img src="../assets/img/scene_12_01.gif" alt="">
 						</div>
+						<div id="animate12_3" class="desc">
+							<div class="small">
+								<p>* 1.65mm : 깊어진 키 스트로크</p>
+							</div>
+						</div>
 					</div>
 					<script>
 						// tween_eye
@@ -782,7 +801,12 @@
 						var tween_image1 = new TimelineMax()
 							.to("#animate12_2", 3, {opacity:1, top:225})
 							.to("#animate12_2", 1, {/*opacity: 0.6,*/ delay: 6})
-						
+
+						TweenMax.set("#animate12_3", {opacity: 0});
+						var tween_image2 = new TimelineMax()
+							.to("#animate12_3", 2, {opacity: 1, delay: 5})
+							.to("#animate12_3", 3, {})
+
 						// build scene
 						var sceneOption = {
 							triggerElement: "#trigger12",
@@ -808,6 +832,9 @@
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
 										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption2)
+										.setTween(tween_image2)
+										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption_eye)
 										.setTween(tween_eye)
 										.addTo(controller);
@@ -818,9 +845,9 @@
 					<div id="trigger13" class="spacer s0"></div>
 					<div id="animate13">
 						<div class="blank"></div>
-						<div id="animate13_eye" class="eyebrow">확 넓어진 터치패드</div>
+						<div id="animate13_eye" class="eyebrow">터치패드</div>
 						<div id="animate13_1" class="title">
-							<h2>사소한 것도<br />놓치지 않는 디테일</h2>
+							<h2>확 넓어진 <br />터치패드로 자유롭게</h2>
 						</div>
 						<div id="animate13_2" class="image">
 							<img src="../assets/img/scene_13_01.gif" alt="">
@@ -1119,7 +1146,7 @@
 								<div class="image"><img src="../assets/img/scene_15_02.png" alt=""></div>
 							</li>
 							<li class="type1">
-								<strong class="txt">차세대 그래픽 <br>인텔® Iris® Xe 그래픽</strong>
+								<strong class="txt">차세대 그래픽 <br>인텔® Iris® X<sup>e</sup> 그래픽</strong>
 								<div class="image"><img src="../assets/img/scene_15_03.png" alt=""></div>
 							</li>
 							<li class="type2">
