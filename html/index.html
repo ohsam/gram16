@@ -1066,6 +1066,9 @@
 						<div id="animate14_2" class="video" style="background-color:#000;">
 							<img src="../assets/img/CPU.gif" alt="" />
 						</div>
+						<div id="animate14_3" class="desc grey">
+							<p class="small indent">CPU i5 이상, Windows 10 OS 포함 제품에 한함</p>
+						</div>
 					</div>
 					<script>
 						// tween_title
@@ -1075,10 +1078,15 @@
 							.to("#animate14_1", 3, {delay: 4})
 
 						//tween_image
-						TweenMax.set("#animate14_2", {opacity: 0, top:"238"});
+						TweenMax.set("#animate14_2", {opacity: 0, top:"270"});
 						var tween_image1 = new TimelineMax()
-							.to("#animate14_2", 3, {opacity:1, top:188})
+							.to("#animate14_2", 3, {opacity:1, top:220})
 							.to("#animate14_2", 1, {delay: 6})
+
+						TweenMax.set("#animate14_3", {opacity: 0, top:"280"});
+						var tween_image2 = new TimelineMax()
+							.to("#animate14_3", 2.5, {opacity:1, top:200, delay:0.5})
+							.to("#animate14_3", 1, {delay: 6})
 
 						// build scene
 						var sceneOption = {
@@ -1098,7 +1106,9 @@
 										.addTo(controller);
 						new ScrollMagic.Scene(sceneOption2)
 										.setTween(tween_image1)
-										//.addIndicators({name: "14 video (duration: 100%)"})
+										.addTo(controller);
+						new ScrollMagic.Scene(sceneOption)
+										.setTween(tween_image2)
 										.addTo(controller);
 					</script>
 				</section>
